@@ -61,7 +61,23 @@ nav {
 
 section {
     position: relative;
-    transition: clip-path 0.3s ease;
+}
+
+/* Remove the general section hover effects */
+section:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Add specific hover effect for the features section */
+.features-section {
+    transition: all 0.5s ease;
+}
+
+.features-section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    z-index: 10;
 }
 
 section.fade-in {
@@ -228,8 +244,13 @@ section::before {
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Space between bullet and text */
+    gap: 0.5rem;
     justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
 }
 
 .feature-item::before {
@@ -240,6 +261,12 @@ section::before {
     background-color: #e09f3e;
     transform: rotate(45deg);
     box-shadow: 0 0 10px rgba(224, 159, 62, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover::before {
+    transform: rotate(225deg);
+    background-color: var(--color-text);
 }
 
 .carousel-container {
@@ -359,4 +386,14 @@ section::before {
 
 .group-hover\:backdrop-blur-md:hover {
     backdrop-filter: blur(8px);
+}
+
+/* Add styles for the text content */
+.content-description {
+    transition: all 0.4s ease;
+}
+
+.content-description:hover {
+    transform: scale(1.05);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
