@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulSeed Festival</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-[#335c67]">
+    <div id="blur-overlay"></div>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-100 left-0 right-0 z-20 bg-transparent">
+        <div class="container mx-auto px-4 py-3 flex justify-center items-center">
+            <div class="flex flex-col items-center w-full">
+                <span class="nav-line-horizontal"></span>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="join.html" class="nav-link">Join Us</a>
+                    <a href="lineup.html" class="nav-link">Lineup</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </div>
+                <span class="nav-line-horizontal"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative h-screen bg-cover bg-center fade-in" style="background-image: url('assets/images/hero.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70"></div>
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-center text-white space-y-6 hero-content-box home-hero p-12 group transform transition-all duration-500 hover:scale-105">
+                <div class="relative overflow-hidden">
+                    <div style="background: rgba(0, 0, 0, 0.3)" class="absolute inset-0 backdrop-blur-sm transition-all duration-500 group-hover:backdrop-blur-md"></div>
+                    <h1 class="text-7xl font-serif tracking-wider mb-4 relative z-10">SoulSeed Festival</h1>
+                    <p class="text-2xl font-light tracking-widest uppercase relative z-10">A celebration of music, healing and art</p>
+                    <div class="mt-12 flex items-center justify-center space-x-6 relative z-10">
+                        <p class="text-2xl font-light tracking-wider">Yenice Vadi</p>
+                        <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                        <p class="text-2xl font-light tracking-wider">JULY 11-13, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section style="background-color: #1a2e33" class="px-4 py-24 text-center relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-[#335c67] rounded-full opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#335c67] rounded-full opacity-10 translate-x-1/2 translate-y-1/2"></div>
+        
+        <!-- Central content with separate hover animations -->
+        <div class="container mx-auto max-w-4xl relative">
+            <div class="flex flex-col items-center space-y-12">
+                <!-- Mandala with its own hover animation -->
+                <div class="transform transition-all duration-500 hover:scale-105 hover:rotate-45">
+                    <img src="assets/images/mandala.png" alt="" class="w-24" aria-hidden="true">
+                </div>
+                
+                <!-- Text with its own hover animation -->
+                <div class="relative overflow-hidden transform transition-all duration-500 hover:scale-105">
+                    <div style="background: rgba(0, 0, 0, 0.2)" class="absolute inset-0 backdrop-blur-sm transition-all duration-500 group-hover:backdrop-blur-md rounded-3xl"></div>
+                    <p class="font-cormorant text-2xl leading-relaxed font-light text-[#fff3b0] relative z-10 px-8 py-6">
+                        Join us for a transformative journey at the intersection of music, healing, and art. SoulSeed Festival brings together Anatolian and indigenous cultures in the heart of Yenice Vadi, creating a sacred space for connection, creativity, and community healing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Guests Section -->
+    <section style="background-color: #0d1618" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-12 tracking-[0.2em] uppercase font-light">Featured Guests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <!-- Guest Card 1 -->
+                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/guest1.png" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                    </div>
+                    <div class="p-8 relative text-center">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                        </div>
+                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Yawanawa</h3>
+                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                        <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                            Indigenous wisdom keeper and ceremonial guide
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Guest Card 2 -->
+                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/guest2.png" alt="Islandman" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                    </div>
+                    <div class="p-8 relative text-center">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                        </div>
+                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Islandman</h3>
+                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                        <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                            Electronic music producer and performer
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Guest Card 3 -->
+                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/guest3.jpg" alt="Guest 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                    </div>
+                    <div class="p-8 relative text-center">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                        </div>
+                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Guest Name</h3>
+                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                        <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                            Indigenous wisdom keeper and ceremony facilitator
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Full Lineup Button -->
+            <div class="text-center">
+                <button type="button" class="custom-button">
+                    FULL LINEUP COMING SOON
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section style="background-image: url('assets/images/call1.jpg'); background-size: cover; background-position: center; background-color: rgba(55, 6, 23, 0.8);" class="py-16 relative">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-[#370617]/95"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Content Box with Blur Background -->
+            <div class="max-w-4xl mx-auto p-12 rounded-lg" style="background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);">
+
+                
+                <!-- Introduction Text -->
+                <div class="max-w-2xl mx-auto mb-16 text-center">
+                    <p class="font-cormorant text-2xl leading-relaxed text-[#fff3b0]">
+                        Experience three transformative days of music, healing, and community in the heart of Yenice Vadi. Immerse yourself in a carefully curated journey of:
+                    </p>
+                </div>
+
+                <!-- Festival Features List -->
+                <div class="max-w-lg mx-auto">
+                    <ul class="feature-list grid grid-cols-1 gap-6 text-[#fff3b0] text-center">
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Sacred Music Ceremonies</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Sound Healing Sessions</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Indigenous Wisdom Sharing</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Transformative Workshops</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Community Gatherings</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section style="background-color: #1a2e33" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-12 tracking-[0.2em] uppercase font-light">Location</h2>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Image Carousel -->
+                <div class="swiper rounded-lg">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/1.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/2.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/3.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/4.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/5.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/6.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Location Description -->
+                <div class="space-y-6">
+                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed">
+                        Nestled in the heart of Turkey's pristine nature, Yenice Vadi is a sacred valley where ancient wisdom meets natural beauty. This enchanting location provides the perfect backdrop for our transformative festival experience.
+                    </p>
+                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed">
+                        Surrounded by majestic mountains and blessed with crystal-clear streams, this valley has been a gathering place for spiritual seekers and nature lovers for generations. Its serene atmosphere and powerful energy create an ideal environment for deep connection and inner exploration.
+                    </p>
+                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed">
+                        The valley's natural amphitheaters and peaceful groves will host our ceremonies, workshops, and performances, while its starlit nights will witness our community gatherings and celebrations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mailing List Section -->
+    <section style="background-color: #370617" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-6 tracking-[0.2em] uppercase font-light">Stay Connected</h2>
+                <p class="font-marcellus text-[#fff3b0] text-lg mb-12 leading-relaxed">
+                    Join our sacred circle to receive festival updates, early bird tickets, and exclusive content
+                </p>
+                
+                <!-- Email Signup Form -->
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        class="w-full md:w-96 px-6 py-4 bg-transparent border-2 border-[#fff3b0]/30 rounded-lg text-[#fff3b0] placeholder-[#fff3b0]/50 focus:outline-none focus:border-[#e09f3e] transition-colors duration-300 font-marcellus"
+                    >
+                    <button class="w-full md:w-auto px-8 py-4 border-2 border-[#e09f3e] bg-[#e09f3e] text-[#1a2e33] font-marcellus rounded-lg transition-all duration-300 uppercase tracking-wider hover:bg-transparent hover:text-[#e09f3e] hover:border-[#e09f3e] hover:transform hover:-translate-y-0.5">
+                        Subscribe
+                    </button>
+                </div>
+                
+                <!-- Privacy Note -->
+                <p class="font-marcellus text-[#fff3b0]/70 text-sm mt-6">
+                    We respect your privacy and will never share your information
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+    --color-dark: #1a2e33;
+    --color-main: #335c67;
+    --color-accent: #e09f3e;
+    --color-text: #fff3b0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-accent); /* Accent color for headings */
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    position: fixed;
+    top: 8;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    color: #ffffff; /* Dark red for links */
+    position: relative;
+    padding-bottom: 2px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.nav-link:hover {
+    color: #bb3e03; /* Dark orange for hover effect */
+    border-bottom: 2px solid #bb3e03;
+}
+
+.nav-line-horizontal {
+    width: 100vw;
+    height: 2px;
+    background-color: #ece4e4; /* Dark red for lines */
+    margin: 4px 0;
+}
+
+.text-terracotta {
+    color: var(--color-accent);
+}
+
+.text-deep-blue {
+    color: var(--color-main);
+}
+
+section {
+    position: relative;
+    transition: clip-path 0.3s ease;
+}
+
+section.fade-in {
+    opacity: 0;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section.fade-in.visible {
+    opacity: 1;
+}
+
+.bg-gradient-to-b {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.bg-terracotta {
+    background-color: var(--color-accent);
+}
+
+.bg-gray-100 {
+    background-color: var(--color-main);
+}
+
+a.bg-white {
+    transition: background-color 0.3s ease;
+}
+
+a.bg-white:hover {
+    background-color: var(--color-accent);
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Reduced to only cover nav */
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    z-index: 15;
+}
+
+/* Add new styles for hero section */
+.hero-section h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.1em;
+}
+
+.hero-section p {
+    font-family: 'Inter', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .text-2xl {
+    letter-spacing: 0.15em;
+    font-weight: 300;
+}
+
+.hero-section .space-y-6 {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content-box {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.hero-content-box:hover {
+    border-color: rgba(224, 159, 62, 0.3);
+    box-shadow: 0 0 30px rgba(224, 159, 62, 0.1);
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+/* Update existing hero styles */
+.hero-section .space-y-6 {
+    animation: fadeIn 1.5s ease-out;
+    padding: 2rem;
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.bg-main {
+    background-color: var(--color-main);
+}
+
+.font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.font-marcellus {
+    font-family: 'Marcellus', serif;
+}
+
+.custom-button {
+    display: inline-block;
+    min-width: 200px;
+    padding: 1rem 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+    color: #fff3b0;
+    background: transparent;
+    border: 2px solid #fff3b0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.custom-button:hover {
+    color: #e6bb7c;
+    border-color: #d7c3a4;
+    background-color: rgba(209, 187, 153, 0.1);
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    transform: translateY(1px);
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between bullet and text */
+    justify-content: center;
+}
+
+.feature-item::before {
+    content: '';
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #e09f3e;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px rgba(224, 159, 62, 0.5);
+}
+
+.carousel-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1); /* Temporary background to see container */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Temporary border to see container */
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dot.active {
+    opacity: 1;
+}
+
+.swiper {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Changed back to cover to fill the space */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet {
+    background: #1a2e33 !important;  /* Changed to your dark teal color */
+    opacity: 0.5 !important;
+    width: 10px !important;  /* Made slightly larger */
+    height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #335c67 !important;  /* Using your lighter teal for active dot */
+}
+
+/* Remove logo styles */
+.logo-container {
+    display: none;
+}
+
+.home-hero {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 3rem !important;  /* Increased padding */
+    max-width: 1000px !important;  /* Increased max-width */
+}
+
+.home-hero:hover {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+/* Update the inner blur div for home hero */
+.home-hero .relative.overflow-hidden {
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 2rem !important;  /* Added padding to inner container */
+}
+
+/* Adjust the blur background size */
+.home-hero .absolute.inset-0 {
+    margin: -1rem !important;  /* Negative margin to extend the blur effect */
+}
+
+/* Remove the previous introduction styles and add these */
+.transform {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.hover\:rotate-45:hover {
+    transform: rotate(45deg);
+}
+
+/* For the text container */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.group-hover\:backdrop-blur-md:hover {
+    backdrop-filter: blur(8px);
+}
