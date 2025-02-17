@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-[#335c67]">
     <div id="blur-overlay"></div>
@@ -45,6 +46,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="absolute bottom-32 left-0 right-0 flex justify-center">
+            <a href="#tickets" class="custom-button-hero">
+                BUY TICKETS NOW
+            </a>
         </div>
     </section>
 
@@ -142,6 +148,75 @@
         </div>
     </section>
 
+    <!-- Tickets Section -->
+    <section id="tickets" style="background-color: #1a2e33" class="py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-16 tracking-[0.2em] uppercase font-light">Tickets</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Early Bird Ticket -->
+                <div class="ticket-card">
+                    <div class="p-8 text-center h-full flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Early Bird</h3>
+                            <div class="price-tag mb-6">
+                                <span class="font-marcellus text-4xl text-[#fff3b0]">€299</span>
+                            </div>
+                            <ul class="space-y-4 mb-8">
+                                <li class="ticket-feature">3-Day Festival Access</li>
+                                <li class="ticket-feature">Basic Camping</li>
+                                <li class="ticket-feature">All Workshops</li>
+                                <li class="ticket-feature">Welcome Gift</li>
+                            </ul>
+                        </div>
+                        <button class="custom-button">SOLD OUT</button>
+                    </div>
+                </div>
+
+                <!-- Regular Ticket -->
+                <div class="ticket-card">
+                    <div class="p-8 text-center h-full flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Regular</h3>
+                            <div class="price-tag mb-6">
+                                <span class="font-marcellus text-4xl text-[#fff3b0]">€399</span>
+                            </div>
+                            <ul class="space-y-4 mb-8">
+                                <li class="ticket-feature">3-Day Festival Access</li>
+                                <li class="ticket-feature">Premium Camping</li>
+                                <li class="ticket-feature">All Workshops</li>
+                                <li class="ticket-feature">Welcome Gift</li>
+                                <li class="ticket-feature">Festival T-Shirt</li>
+                            </ul>
+                        </div>
+                        <button class="custom-button">SELECT</button>
+                    </div>
+                </div>
+
+                <!-- VIP Ticket -->
+                <div class="ticket-card">
+                    <div class="p-8 text-center h-full flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">VIP</h3>
+                            <div class="price-tag mb-6">
+                                <span class="font-marcellus text-4xl text-[#fff3b0]">€599</span>
+                            </div>
+                            <ul class="space-y-4 mb-8">
+                                <li class="ticket-feature">3-Day Festival Access</li>
+                                <li class="ticket-feature">Luxury Glamping</li>
+                                <li class="ticket-feature">All Workshops</li>
+                                <li class="ticket-feature">VIP Welcome Pack</li>
+                                <li class="ticket-feature">Exclusive Events</li>
+                                <li class="ticket-feature">Priority Access</li>
+                            </ul>
+                        </div>
+                        <button class="custom-button">SELECT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section style="background-image: url('assets/images/call1.jpg'); background-size: cover; background-position: center; background-color: rgba(55, 6, 23, 0.8);" class="py-16 relative">
         <!-- Dark overlay -->
@@ -217,18 +292,31 @@
 
                 <!-- Location Description -->
                 <div class="space-y-6">
-                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed">
+                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
                         Nestled in the heart of Turkey's pristine nature, Yenice Vadi is a sacred valley where ancient wisdom meets natural beauty. This enchanting location provides the perfect backdrop for our transformative festival experience.
                     </p>
-                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed">
+                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
                         Surrounded by majestic mountains and blessed with crystal-clear streams, this valley has been a gathering place for spiritual seekers and nature lovers for generations. Its serene atmosphere and powerful energy create an ideal environment for deep connection and inner exploration.
                     </p>
-                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed">
+                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
                         The valley's natural amphitheaters and peaceful groves will host our ceremonies, workshops, and performances, while its starlit nights will witness our community gatherings and celebrations.
                     </p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="w-full h-96">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.8897371541584!2d28.299782!3d37.124334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bf7452d1b4c8b1%3A0x7c3c8c1c56a8c2a0!2sYenice%20Vadi!5e0!3m2!1sen!2sus!4v1709928367296!5m2!1sen!2sus"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="eager" 
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
     </section>
 
     <!-- Mailing List Section -->
@@ -256,6 +344,24 @@
                 <p class="font-marcellus text-[#fff3b0]/70 text-sm mt-6">
                     We respect your privacy and will never share your information
                 </p>
+
+                <!-- Social Media Section -->
+                <div class="mt-16">
+                    <div class="flex justify-center space-x-12">
+                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
+                            <i class="fab fa-instagram text-4xl"></i>
+                        </a>
+                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
+                            <i class="fab fa-facebook text-4xl"></i>
+                        </a>
+                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
+                            <i class="fab fa-twitter text-4xl"></i>
+                        </a>
+                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
+                            <i class="fab fa-youtube text-4xl"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

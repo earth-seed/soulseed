@@ -397,3 +397,75 @@ section::before {
     transform: scale(1.05);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Hero Button Styles */
+.custom-button-hero {
+    display: inline-block;
+    min-width: 200px;
+    padding: 1rem 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+    color: #1a2e33;
+    background: #e09f3e;
+    border: 2px solid #e09f3e;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 30;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button-hero:hover {
+    background: #fff3b0;
+    border-color: #fff3b0;
+    color: #1a2e33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(224, 159, 62, 0.3);
+}
+
+.custom-button-hero:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(224, 159, 62, 0.2);
+}
+
+/* Ticket Section Styles */
+.ticket-card {
+    background-color: #2a4147;
+    border: 1px solid rgba(224, 159, 62, 0.1);
+    border-radius: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(224, 159, 62, 0.3);
+}
+
+.ticket-feature {
+    font-family: 'Marcellus', serif;
+    color: #fff3b0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ticket-feature::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #e09f3e;
+}
+
+.price-tag {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: rgba(224, 159, 62, 0.1);
+    border-radius: 0.5rem;
+}
