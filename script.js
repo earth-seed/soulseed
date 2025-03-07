@@ -46,11 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuOpenIcon = document.querySelector('.menu-open');
     const menuCloseIcon = document.querySelector('.menu-close');
 
-    menuToggle?.addEventListener('click', () => {
-        mobileMenu.classList.toggle('show');
-        menuOpenIcon.classList.toggle('hidden');
-        menuCloseIcon.classList.toggle('hidden');
-    });
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+    }
 
     // Close mobile menu on window resize if open (add to existing resize listener)
     const originalResizeHandler = window.onresize;
