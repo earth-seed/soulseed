@@ -20,28 +20,64 @@ h1, h2, h3 {
 }
 
 nav {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    position: fixed;
-    top: 8;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: none;
+    padding: 2rem 3rem;  /* Increased padding */
 }
 
 .nav-link {
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    color: #ffffff; /* Dark red for links */
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff;  /* Changed to white */
     position: relative;
     padding-bottom: 2px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;  /* Increased font size */
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;  /* Slightly increased letter spacing */
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #bb3e03; /* Dark orange for hover effect */
-    border-bottom: 2px solid #bb3e03;
+    color: #574e93;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #574e93;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.nav-link-mobile {
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff;  /* Changed to white */
+    font-size: 1.5rem;  /* Increased font size */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 2.5rem;  /* Increased padding */
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link-mobile:hover {
+    color: #574e93;
+    background-color: rgba(87, 78, 147, 0.1);
 }
 
 .nav-line-horizontal {
@@ -505,34 +541,38 @@ img {
 }
 
 .content-container {
-    margin-top: -6vh; /* Increased negative margin to move content higher */
+    margin-top: -16vh;
 }
 
 .logo-image {
     width: auto;
     height: auto;
-    max-width: 90%;
-    max-height: 70vh;
+    max-width: 112.5%;  /* Increased from 90% by 1.25x */
+    max-height: 87.5vh;  /* Increased from 70vh by 1.25x */
     object-fit: contain;
 }
 
 .festival-date {
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-size: 2rem;
+    margin-top: -1rem;
+    letter-spacing: 0.1em;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .content-container {
-        margin-top: -4vh; /* Increased negative margin for mobile */
+        margin-top: -12vh;
     }
     
     .logo-image {
-        max-width: 95%;
-        max-height: 60vh;
+        max-width: 118.75%;
+        max-height: 75vh;
     }
 
     .festival-date {
-        font-size: 1.25rem;
-        margin-top: 1rem;
+        font-size: 1.75rem;
+        margin-top: -0.5rem;
+        letter-spacing: 0.08em;
     }
 }

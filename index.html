@@ -13,19 +13,38 @@
 </head>
 <body class="bg-[#335c67]">
     <div id="blur-overlay"></div>
-    <!-- Navigation Bar -->
-    <nav class="fixed top-100 left-0 right-0 z-20 bg-transparent">
-        <div class="container mx-auto px-4 py-3 flex justify-center items-center">
-            <div class="flex flex-col items-center w-full">
-                <span class="nav-line-horizontal"></span>
-                <div class="flex space-x-4">
+    <!-- Navigation -->
+    <nav class="fixed top-0 right-0 z-50">
+        <div class="nav-container">
+            <div class="flex items-center justify-end">
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="h-8 w-px bg-[#e09f3e]/30"></div>
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="join.html" class="nav-link">Join Us</a>
                     <a href="lineup.html" class="nav-link">Lineup</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="faq.html" class="nav-link">FAQ</a>
                 </div>
-                <span class="nav-line-horizontal"></span>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="lg:hidden text-[#fff3b0] focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="menu-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path class="menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Panel -->
+            <div id="mobile-menu" class="lg:hidden hidden mt-4">
+                <div class="flex flex-col items-end space-y-4 py-4 bg-[#1a2e33]/95 backdrop-blur-sm rounded-lg">
+                    <a href="index.html" class="nav-link-mobile">Home</a>
+                    <a href="join.html" class="nav-link-mobile">Join Us</a>
+                    <a href="lineup.html" class="nav-link-mobile">Lineup</a>
+                    <a href="about.html" class="nav-link-mobile">About</a>
+                    <a href="faq.html" class="nav-link-mobile">FAQ</a>
+                </div>
             </div>
         </div>
     </nav>
