@@ -31,26 +31,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section relative h-screen bg-cover bg-center fade-in" style="background-image: url('assets/images/hero.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70"></div>
-        <div class="relative z-10 flex items-center justify-center h-full">
-            <div class="text-center text-white space-y-6 hero-content-box home-hero p-12 group transform transition-all duration-500 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <div style="background: rgba(0, 0, 0, 0.3)" class="absolute inset-0 backdrop-blur-sm transition-all duration-500 group-hover:backdrop-blur-md"></div>
-                    <h1 class="text-7xl font-serif tracking-wider mb-4 relative z-10">SoulSeed Festival</h1>
-                    <p class="text-2xl font-light tracking-widest uppercase relative z-10">A celebration of music, healing and art</p>
-                    <div class="mt-12 flex items-center justify-center space-x-6 relative z-10">
-                        <p class="text-2xl font-light tracking-wider">Yenice Vadi</p>
-                        <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                        <p class="text-2xl font-light tracking-wider">JULY 11-13, 2025</p>
-                    </div>
-                </div>
-            </div>
+    <section class="hero-section relative min-h-screen flex items-start justify-center">
+        <div class="absolute inset-0 bg-cover bg-center z-0" 
+             style="background-image: url('assets/16_9.png');">
         </div>
-        <div class="absolute bottom-32 left-0 right-0 flex justify-center">
-            <a href="#tickets" class="custom-button-hero">
-                BUY TICKETS NOW
-            </a>
+        <div class="relative z-10 container mx-auto px-4 flex flex-col items-center content-container">
+            <img 
+                src="assets/SS_Logo.png" 
+                alt="Soul Seed Festival Anatolia" 
+                class="logo-image"
+            >
+            <h2 class="festival-date text-white text-2xl mt-6 font-light tracking-wider">
+                13-25 Temmuz | Yenice Vadi
+            </h2>
         </div>
     </section>
 
