@@ -530,17 +530,27 @@ img {
 
     .container {
         width: 100%;
-        max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        overflow-x: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content-container {
+        margin-top: -16vh;
     }
 
     .logo-image {
         width: auto;
         height: auto;
         max-width: 90%;
-        max-height: 50vh;
+        max-height: 70vh;
         object-fit: contain;
     }
 
