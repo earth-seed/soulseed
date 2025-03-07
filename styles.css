@@ -520,26 +520,41 @@ img {
     margin: 0 auto;
 }
 
-/* Responsive adjustments */
+/* Desktop logo styles (outside media query) */
+.logo-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;  /* Changed from 112.5% to 100% */
+    max-height: 70vh;  /* Changed from 87.5vh to 70vh */
+    object-fit: contain;
+}
+
+/* Keep existing mobile styles */
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        max-width: 100vw;
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative !important;
     }
 
-    .container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 80px;
+    .hero-section {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        height: 100vh !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        max-width: 100vw !important;
     }
 
-    img {
-        display: block;
-        margin: 0 auto;
+    .logo-image {
+        width: 100% !important;
+        max-width: 95% !important;
+        max-height: 80vh !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
     }
 
     .content-container {
@@ -551,24 +566,7 @@ img {
         align-items: center !important;
         justify-content: center !important;
         overflow-x: hidden !important;
-    }
-
-    .hero-section {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        height: 100vh !important;
-        width: 100% !important;
-        overflow: hidden !important;
-    }
-
-    .logo-image {
-        width: 100% !important;
-        max-width: 95% !important;  /* Increased from 90% */
-        max-height: 80vh !important;  /* Increased from 70vh */
-        object-fit: contain !important;
-        margin: 0 auto !important;
+        max-width: 100vw !important;
     }
 
     .festival-date {
@@ -595,14 +593,6 @@ img {
 
 .content-container {
     margin-top: -16vh;
-}
-
-.logo-image {
-    width: auto;
-    height: auto;
-    max-width: 112.5%;
-    max-height: 87.5vh;
-    object-fit: contain;
 }
 
 .festival-date {
