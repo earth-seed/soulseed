@@ -546,9 +546,17 @@ img {
         margin-top: -16vh;
     }
 
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
     .logo-image {
-        width: auto;
-        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
         max-width: 90%;
         max-height: 70vh;
         object-fit: contain;
@@ -557,6 +565,9 @@ img {
     .festival-date {
         font-size: 1rem !important;
         margin-top: 1rem !important;
+        width: 100%;
+        text-align: center;
+        padding: 0;
     }
 }
 
