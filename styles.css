@@ -550,6 +550,7 @@ img {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
+        overflow-x: hidden !important;
     }
 
     .hero-section {
@@ -564,8 +565,8 @@ img {
 
     .logo-image {
         width: 100% !important;
-        max-width: 90% !important;
-        max-height: 70vh !important;
+        max-width: 95% !important;  /* Increased from 90% */
+        max-height: 80vh !important;  /* Increased from 70vh */
         object-fit: contain !important;
         margin: 0 auto !important;
     }
