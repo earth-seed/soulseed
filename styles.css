@@ -1,22 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap');
+/* Add these @font-face declarations at the top of your CSS file, after the Google Fonts import */
+@font-face {
+    font-family: 'Gatwick';
+    src: url('../fonts/gatwick.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Westiva';
+    src: url('../fonts/westiva-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Westiva';
+    src: url('../fonts/westiva-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YourFirstFont';
+    src: url('../fonts/YourFirstFont.woff2') format('woff2'),
+         url('../fonts/YourFirstFont.woff') format('woff'),
+         url('../fonts/YourFirstFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YourSecondFont';
+    src: url('../fonts/YourSecondFont.woff2') format('woff2'),
+         url('../fonts/YourSecondFont.woff') format('woff'),
+         url('../fonts/YourSecondFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --color-dark: #1a2e33;
     --color-main: #335c67;
     --color-accent: #e09f3e;
     --color-text: #fff3b0;
+    font-family: 'Westiva', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background-color: var(--color-dark);
     color: var(--color-text);
     min-height: 100vh;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--color-accent); /* Accent color for headings */
+    font-family: 'Westiva', sans-serif;
+    font-weight: bold;
+    color: var(--color-accent);
 }
 
 nav {
@@ -31,14 +75,11 @@ nav {
 }
 
 .nav-link {
-    font-family: 'Cormorant Garamond', serif;
-    color: #ffffff;  /* Changed to white */
     position: relative;
     padding-bottom: 2px;
-    font-size: 1.5rem;  /* Increased font size */
-    font-weight: 500;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;  /* Slightly increased letter spacing */
+    letter-spacing: 0.12em;
     transition: color 0.3s ease;
 }
 
@@ -63,13 +104,10 @@ nav {
 }
 
 .nav-link-mobile {
-    font-family: 'Cormorant Garamond', serif;
-    color: #ffffff;  /* Changed to white */
-    font-size: 1.5rem;  /* Increased font size */
-    font-weight: 500;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    padding: 0.75rem 2.5rem;  /* Increased padding */
+    padding: 0.75rem 2.5rem;
     transition: all 0.3s ease;
     width: 100%;
     text-align: center;
@@ -107,13 +145,34 @@ section:hover {
 
 /* Add specific hover effect for the features section */
 .features-section {
+    background-color: rgba(51, 92, 103, 0.08); /* Much lighter blue */
     transition: all 0.5s ease;
+    position: relative;
+    padding: 4rem 2rem;
 }
 
+/* Remove any existing mandala-related styles */
+.features-section::before,
+.features-section::after {
+    display: none; /* This removes any decorative elements */
+}
+
+/* Update hover effect to be more subtle without the mandala */
 .features-section:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    z-index: 10;
+    background-color: rgba(51, 92, 103, 0.12);
+}
+
+/* Ensure content remains readable on the new background */
+.features-section h2,
+.features-section h3 {
+    color: var(--color-accent);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.features-section p {
+    color: #ffffff;
+    font-family: 'Westiva', sans-serif;
+    font-weight: normal; /* Ensures regular weight */
 }
 
 section.fade-in {
@@ -178,13 +237,14 @@ section::before {
 
 /* Add new styles for hero section */
 .hero-section h1 {
+    font-family: 'Gatwick', serif;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: 0.1em;
+    margin-bottom: 1rem;
 }
 
 .hero-section p {
-    font-family: 'Inter', sans-serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -238,19 +298,10 @@ section::before {
     background-color: var(--color-main);
 }
 
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.font-marcellus {
-    font-family: 'Marcellus', serif;
-}
-
 .custom-button {
     display: inline-block;
     min-width: 200px;
     padding: 1rem 3rem;
-    font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
     letter-spacing: 0.2em;
     color: #fff3b0;
@@ -439,7 +490,6 @@ section::before {
     display: inline-block;
     min-width: 200px;
     padding: 1rem 3rem;
-    font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
     letter-spacing: 0.2em;
     color: #1a2e33;
@@ -485,8 +535,6 @@ section::before {
 }
 
 .ticket-feature {
-    font-family: 'Marcellus', serif;
-    color: #fff3b0;
     position: relative;
     padding-left: 1.5rem;
 }
@@ -528,7 +576,6 @@ img {
     max-height: 70vh;  /* Changed from 87.5vh to 70vh */
     object-fit: contain;
 }
-
 /* Keep existing mobile styles */
 @media (max-width: 768px) {
     html, body {
@@ -596,7 +643,6 @@ img {
 }
 
 .festival-date {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     font-size: 2rem;
     margin-top: -1rem;
     letter-spacing: 0.1em;
@@ -630,4 +676,75 @@ img {
         color: var(--color-text);
         background-color: rgba(224, 159, 62, 0.1);  /* Using your --color-accent with opacity */
     }
+}
+
+.stay-connected h2 {
+    font-weight: bold;
+}
+
+.stay-connected p, 
+.stay-connected input, 
+.stay-connected button {
+    /* Remove font-family declarations */
+}
+
+/* Remove font-family declarations from these elements since they'll inherit from :root */
+body,
+h1, h2, h3,
+p,
+button,
+input,
+textarea,
+select,
+.nav-link,
+.nav-link-mobile,
+.custom-button,
+.custom-button-hero,
+.ticket-feature,
+.festival-date,
+.stay-connected h2,
+.stay-connected p,
+.stay-connected input,
+.stay-connected button,
+.hero-section p,
+.hero-section .text-2xl {
+    /* Remove font-family declarations */
+}
+
+/* Only keep font-weight variations where needed */
+h1, h2, h3,
+.nav-link,
+.nav-link-mobile,
+.custom-button,
+.custom-button-hero {
+    font-weight: bold;
+}
+
+/* Also update any Tailwind classes in your HTML that might be setting fonts */
+.text-7xl {
+    font-family: 'Westiva', sans-serif;
+}
+
+/* Ensure the backdrop blur and container styling remains */
+.features-section .relative.overflow-hidden {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.features-section .relative.overflow-hidden:hover {
+    backdrop-filter: blur(8px);
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Remove any potential conflicting styles */
+.features-section .text-2xl {
+    font-weight: normal;
+}
+
+/* Clean up hover states */
+.features-section:hover {
+    background-color: rgba(51, 92, 103, 0.12);
 }
