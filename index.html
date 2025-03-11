@@ -57,11 +57,16 @@
             <img 
                 src="assets/SS_Logo.png" 
                 alt="Soul Seed Festival Anatolia" 
-                class="logo-image"
+                class="logo-image transform transition-all duration-300 hover:scale-105"
             >
-            <h2 class="festival-date text-white text-2xl mt-6 font-light tracking-wider">
-                13-25 Temmuz | Yenice Vadi
-            </h2>
+            <div class="flex flex-col items-center space-y-12">
+                <h2 class="festival-date text-white text-2xl font-extrabold tracking-wider transform transition-all duration-300 hover:scale-105">
+                    13-25 Temmuz | Yenice Vadi
+                </h2>
+                <h2 class="festival-date text-white text-2xl font-extrabold tracking-wider transform transition-all duration-300 hover:scale-105">
+                    MUSIC & HEALING
+                </h2>
+            </div>
         </div>
     </section>
 
@@ -79,13 +84,14 @@
     </section>
 
     <!-- Featured Guests Section -->
-    <section class="py-16 bg-[#bca393] relative z-10">
+    <section class="py-16 bg-[#0d1618]">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto">
+                <!-- Featured Guests Title -->
                 <div class="text-center mb-16 w-full">
-                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-light">Featured Guests</h2>
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">Featured Guests</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
                     <!-- Guest Card 1 -->
                     <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                         <div class="relative overflow-hidden">
@@ -96,9 +102,9 @@
                             <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
                                 <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
                             </div>
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Yawanawa</h3>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Yawanawa</h3>
                             <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                            <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
                                 Indigenous wisdom keeper and ceremonial guide
                             </p>
                         </div>
@@ -114,9 +120,9 @@
                             <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
                                 <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
                             </div>
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Islandman</h3>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Islandman</h3>
                             <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                            <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
                                 Electronic music producer and performer
                             </p>
                         </div>
@@ -132,18 +138,96 @@
                             <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
                                 <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
                             </div>
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Guest Name</h3>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
                             <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                            <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
                                 Indigenous wisdom keeper and ceremony facilitator
                             </p>
                         </div>
                     </div>
                 </div>
                 
+                <!-- New row of 5 smaller cards -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-24">
+                    <!-- Smaller guest card 1 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
+                        </div>
+                        <div class="p-4 relative text-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
+                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
+                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
+                                Role/Description
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Smaller guest card 2 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
+                        </div>
+                        <div class="p-4 relative text-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
+                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
+                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
+                                Role/Description
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Smaller guest card 3 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
+                        </div>
+                        <div class="p-4 relative text-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
+                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
+                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
+                                Role/Description
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Smaller guest card 4 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
+                        </div>
+                        <div class="p-4 relative text-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
+                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
+                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
+                                Role/Description
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Smaller guest card 5 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
+                        </div>
+                        <div class="p-4 relative text-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
+                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
+                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
+                                Role/Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Full Lineup Button -->
-                <div class="text-center">
-                    <button type="button" class="custom-button">
+                <div class="text-center mt-24">
+                    <button type="button" style="color: white; border-color: white;" class="custom-button">
                         FULL LINEUP COMING SOON
                     </button>
                 </div>
@@ -152,25 +236,23 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section style="background-image: url('assets/images/call1.jpg'); background-size: cover; background-position: center; background-color: rgba(55, 6, 23, 0.8);" class="py-16 relative">
+    <section style="background-color: #7a6e7f;" class="py-16 relative">
         <!-- Dark overlay -->
-        <div class="absolute inset-0 bg-[#370617]/95"></div>
+        <div class="absolute inset-0 bg-[#7a6e7f]/95"></div>
         
         <div class="container mx-auto px-4 relative z-10">
             <!-- Content Box with Blur Background -->
-            <div class="max-w-4xl mx-auto p-12 rounded-lg" style="background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);">
-
-                
+            <div class="max-w-4xl mx-auto p-12 rounded-lg" style="background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);">
                 <!-- Introduction Text -->
                 <div class="max-w-2xl mx-auto mb-16 text-center">
-                    <p class="font-cormorant text-2xl leading-relaxed text-[#fff3b0]">
+                    <p class="font-cormorant text-2xl leading-relaxed text-white">
                         Experience three transformative days of music, healing, and community in the heart of Yenice Vadi. Immerse yourself in a carefully curated journey of:
                     </p>
                 </div>
 
                 <!-- Festival Features List -->
                 <div class="max-w-lg mx-auto">
-                    <ul class="feature-list grid grid-cols-1 gap-6 text-[#fff3b0] text-center">
+                    <ul class="feature-list grid grid-cols-1 gap-6 text-white text-center">
                         <li class="feature-item">
                             <span class="font-marcellus tracking-wide text-lg">Sacred Music Ceremonies</span>
                         </li>
@@ -195,46 +277,55 @@
     <!-- Location Section -->
     <section style="background-color: #1a2e33" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-12 tracking-[0.2em] uppercase font-light">Location</h2>
-            
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Image Carousel -->
-                <div class="swiper rounded-lg">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="assets/images/yenice/1.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/yenice/2.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/yenice/3.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/yenice/4.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/yenice/5.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/yenice/6.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+            <div class="max-w-6xl mx-auto">
+                <!-- Location Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">Location</h2>
                 </div>
+                
+                <!-- Grid container for image and description -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Image Carousel -->
+                    <div class="swiper rounded-lg">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/yenice/1.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/yenice/2.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/yenice/3.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/yenice/4.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/yenice/5.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/yenice/6.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
+                            </div>
+                        </div>
+                        <!-- Navigation Arrows -->
+                        <div class="swiper-button-next text-white"></div>
+                        <div class="swiper-button-prev text-white"></div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
 
-                <!-- Location Description -->
-                <div class="space-y-6">
-                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
-                        Nestled in the heart of Turkey's pristine nature, Yenice Vadi is a sacred valley where ancient wisdom meets natural beauty. This enchanting location provides the perfect backdrop for our transformative festival experience.
-                    </p>
-                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
-                        Surrounded by majestic mountains and blessed with crystal-clear streams, this valley has been a gathering place for spiritual seekers and nature lovers for generations. Its serene atmosphere and powerful energy create an ideal environment for deep connection and inner exploration.
-                    </p>
-                    <p class="font-marcellus text-[#fff3b0] text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
-                        The valley's natural amphitheaters and peaceful groves will host our ceremonies, workshops, and performances, while its starlit nights will witness our community gatherings and celebrations.
-                    </p>
+                    <!-- Location Description -->
+                    <div class="space-y-6">
+                        <p class="font-marcellus text-white text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
+                            Nestled in the heart of Turkey's pristine nature, Yenice Vadi is a sacred valley where ancient wisdom meets natural beauty. This enchanting location provides the perfect backdrop for our transformative festival experience.
+                        </p>
+                        <p class="font-marcellus text-white text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
+                            Surrounded by majestic mountains and blessed with crystal-clear streams, this valley has been a gathering place for spiritual seekers and nature lovers for generations. Its serene atmosphere and powerful energy create an ideal environment for deep connection and inner exploration.
+                        </p>
+                        <p class="font-marcellus text-white text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
+                            The valley's natural amphitheaters and peaceful groves will host our ceremonies, workshops, and performances, while its starlit nights will witness our community gatherings and celebrations.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,11 +345,11 @@
     </section>
 
     <!-- Mailing List Section -->
-    <section style="background-color: #370617" class="py-16">
+    <section style="background-color: #7a6e7f" class="py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-6 tracking-[0.2em] uppercase font-light">Stay Connected</h2>
-                <p class="font-marcellus text-[#fff3b0] text-lg mb-12 leading-relaxed">
+                <h2 class="font-cormorant text-5xl text-[#e09f3e] mb-6 tracking-[0.2em] uppercase font-light">Be the first to know when tickets go live</h2>
+                <p class="font-marcellus text-white text-lg mb-12 leading-relaxed">
                     Join our sacred circle to receive festival updates, early bird tickets, and exclusive content
                 </p>
                 

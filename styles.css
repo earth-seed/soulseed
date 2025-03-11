@@ -146,7 +146,7 @@ section:hover {
 
 /* Add specific hover effect for the features section */
 .features-section {
-    background-color: rgba(51, 92, 103, 0.08) !important;
+    background-color: #bca393 !important;
     transition: all 0.5s ease;
     position: relative;
     padding: 4rem 2rem;
@@ -158,9 +158,9 @@ section:hover {
     display: none; /* This removes any decorative elements */
 }
 
-/* Update hover effect to be more subtle without the mandala */
+/* Update hover effect to be slightly darker version of the same color */
 .features-section:hover {
-    background-color: rgba(51, 92, 103, 0.12) !important;
+    background-color: #b09585 !important;
 }
 
 /* Ensure content remains readable on the new background */
@@ -323,6 +323,16 @@ section::before {
 
 .custom-button:active {
     transform: translateY(1px);
+}
+
+.custom-button.text-white {
+    color: white !important;
+    border-color: white !important;
+}
+
+.custom-button.text-white:hover {
+    color: white !important;
+    border-color: white !important;
 }
 
 .feature-list {
@@ -647,6 +657,7 @@ img {
     font-size: 2rem;
     margin-top: -1rem;
     letter-spacing: 0.1em;
+    font-weight: 800 !important;
 }
 
 /* Mobile menu styles (won't affect desktop) */
@@ -814,4 +825,23 @@ h1, h2, h3,
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     line-height: 1.8;
     letter-spacing: 0.02em;
+}
+
+/* Swiper navigation styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 24px !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e09f3e !important;
 }

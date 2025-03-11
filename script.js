@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
         effect: 'fade',
         fadeEffect: {
             crossFade: true
-        }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 
     // Mobile menu toggle
