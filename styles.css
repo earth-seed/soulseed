@@ -75,6 +75,7 @@ nav {
 }
 
 .nav-link {
+    color: #ffffff !important;
     position: relative;
     padding-bottom: 2px;
     font-size: 1.5rem;
@@ -84,7 +85,7 @@ nav {
 }
 
 .nav-link:hover {
-    color: #574e93;
+    color: var(--color-accent) !important;
 }
 
 .nav-link:after {
@@ -145,7 +146,7 @@ section:hover {
 
 /* Add specific hover effect for the features section */
 .features-section {
-    background-color: rgba(51, 92, 103, 0.08); /* Much lighter blue */
+    background-color: rgba(51, 92, 103, 0.08) !important;
     transition: all 0.5s ease;
     position: relative;
     padding: 4rem 2rem;
@@ -159,7 +160,7 @@ section:hover {
 
 /* Update hover effect to be more subtle without the mandala */
 .features-section:hover {
-    background-color: rgba(51, 92, 103, 0.12);
+    background-color: rgba(51, 92, 103, 0.12) !important;
 }
 
 /* Ensure content remains readable on the new background */
@@ -172,7 +173,7 @@ section:hover {
 .features-section p {
     color: #ffffff;
     font-family: 'Westiva', sans-serif;
-    font-weight: normal; /* Ensures regular weight */
+    font-weight: normal;
 }
 
 section.fade-in {
@@ -746,5 +747,71 @@ h1, h2, h3,
 
 /* Clean up hover states */
 .features-section:hover {
-    background-color: rgba(51, 92, 103, 0.12);
+    background-color: rgba(51, 92, 103, 0.12) !important;
+}
+
+/* Remove any inline styles that might be conflicting */
+.features-section[style] {
+    background-color: rgba(51, 92, 103, 0.08) !important;
+}
+
+/* Introduction section with new purple background */
+.introduction-section {
+    background-color: #7a6e7f !important; /* Purple/mauve */
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Keep the blue-grey content box */
+.introduction-section .content-box {
+    background: #7c8293; /* Blue-grey */
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    transition: all 0.5s ease;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.introduction-section .content-box::before,
+.introduction-section .content-box::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.introduction-section .content-box::before {
+    top: 20px;
+    left: 20px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.introduction-section .content-box::after {
+    bottom: 20px;
+    right: 20px;
+    border-left: 0;
+    border-top: 0;
+}
+
+.introduction-section .content-box:hover {
+    backdrop-filter: blur(8px);
+    transform: scale(1.02);
+    background: #8d93a3; /* Slightly lighter blue-grey on hover */
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.introduction-section p {
+    color: #ffffff;
+    font-family: 'Westiva', sans-serif;
+    font-weight: normal;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    letter-spacing: 0.02em;
 }

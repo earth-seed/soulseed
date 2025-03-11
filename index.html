@@ -66,18 +66,11 @@
     </section>
 
     <!-- Introduction Section -->
-    <section class="features-section text-center relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute top-0 left-0 w-64 h-64 bg-[#335c67] rounded-full opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#335c67] rounded-full opacity-10 translate-x-1/2 translate-y-1/2"></div>
-        
-        <!-- Central content -->
+    <section class="introduction-section text-center relative overflow-hidden">
         <div class="container mx-auto max-w-4xl relative">
-            <div class="flex flex-col items-center space-y-12">
-                <!-- Text with its own hover animation -->
-                <div class="relative overflow-hidden transform transition-all duration-500 hover:scale-105">
-                    <div class="absolute inset-0 backdrop-blur-sm transition-all duration-500 group-hover:backdrop-blur-md rounded-3xl"></div>
-                    <p class="text-2xl leading-relaxed text-white relative z-10 px-8 py-6">
+            <div class="flex flex-col items-center">
+                <div class="content-box">
+                    <p class="text-2xl leading-relaxed text-white relative z-10">
                         Join us for a transformative journey at the intersection of music, healing, and art. SoulSeed Festival brings together Anatolian and indigenous cultures in the heart of Yenice Vadi, creating a sacred space for connection, creativity, and community healing.
                     </p>
                 </div>
@@ -86,138 +79,73 @@
     </section>
 
     <!-- Featured Guests Section -->
-    <section style="background-color: #0d1618" class="py-16">
+    <section class="py-16 bg-[#bca393] relative z-10">
         <div class="container mx-auto px-4">
-            <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-12 tracking-[0.2em] uppercase font-light">Featured Guests</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-                <!-- Guest Card 1 -->
-                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/guest1.png" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
-                    </div>
-                    <div class="p-8 relative text-center">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 w-full">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-light">Featured Guests</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Guest Card 1 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/guest1.png" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
                         </div>
-                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Yawanawa</h3>
-                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                        <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
-                            Indigenous wisdom keeper and ceremonial guide
-                        </p>
+                        <div class="p-8 relative text-center">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                            </div>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Yawanawa</h3>
+                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                            <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                                Indigenous wisdom keeper and ceremonial guide
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Guest Card 2 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/guest2.png" alt="Islandman" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                        </div>
+                        <div class="p-8 relative text-center">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                            </div>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Islandman</h3>
+                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                            <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                                Electronic music producer and performer
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Guest Card 3 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/guest3.jpg" alt="Guest 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                        </div>
+                        <div class="p-8 relative text-center">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                            </div>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Guest Name</h3>
+                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                            <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
+                                Indigenous wisdom keeper and ceremony facilitator
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Guest Card 2 -->
-                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/guest2.png" alt="Islandman" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
-                    </div>
-                    <div class="p-8 relative text-center">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
-                        </div>
-                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Islandman</h3>
-                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                        <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
-                            Electronic music producer and performer
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Guest Card 3 -->
-                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/guest3.jpg" alt="Guest 3" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
-                    </div>
-                    <div class="p-8 relative text-center">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
-                        </div>
-                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Guest Name</h3>
-                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                        <p class="font-marcellus text-[#fff3b0] text-lg tracking-wide leading-relaxed">
-                            Indigenous wisdom keeper and ceremony facilitator
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Full Lineup Button -->
-            <div class="text-center">
-                <button type="button" class="custom-button">
-                    FULL LINEUP COMING SOON
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tickets Section -->
-    <section id="tickets" style="background-color: #1a2e33" class="py-24">
-        <div class="container mx-auto px-4">
-            <h2 class="font-cormorant text-5xl text-center text-[#e09f3e] mb-16 tracking-[0.2em] uppercase font-light">Tickets</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Early Bird Ticket -->
-                <div class="ticket-card">
-                    <div class="p-8 text-center h-full flex flex-col">
-                        <div class="flex-grow">
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Early Bird</h3>
-                            <div class="price-tag mb-6">
-                                <span class="font-marcellus text-4xl text-[#fff3b0]">€299</span>
-                            </div>
-                            <ul class="space-y-4 mb-8">
-                                <li class="ticket-feature">3-Day Festival Access</li>
-                                <li class="ticket-feature">Basic Camping</li>
-                                <li class="ticket-feature">All Workshops</li>
-                                <li class="ticket-feature">Welcome Gift</li>
-                            </ul>
-                        </div>
-                        <button class="custom-button">SOLD OUT</button>
-                    </div>
-                </div>
-
-                <!-- Regular Ticket -->
-                <div class="ticket-card">
-                    <div class="p-8 text-center h-full flex flex-col">
-                        <div class="flex-grow">
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">Regular</h3>
-                            <div class="price-tag mb-6">
-                                <span class="font-marcellus text-4xl text-[#fff3b0]">€399</span>
-                            </div>
-                            <ul class="space-y-4 mb-8">
-                                <li class="ticket-feature">3-Day Festival Access</li>
-                                <li class="ticket-feature">Premium Camping</li>
-                                <li class="ticket-feature">All Workshops</li>
-                                <li class="ticket-feature">Welcome Gift</li>
-                                <li class="ticket-feature">Festival T-Shirt</li>
-                            </ul>
-                        </div>
-                        <button class="custom-button">SELECT</button>
-                    </div>
-                </div>
-
-                <!-- VIP Ticket -->
-                <div class="ticket-card">
-                    <div class="p-8 text-center h-full flex flex-col">
-                        <div class="flex-grow">
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase">VIP</h3>
-                            <div class="price-tag mb-6">
-                                <span class="font-marcellus text-4xl text-[#fff3b0]">€599</span>
-                            </div>
-                            <ul class="space-y-4 mb-8">
-                                <li class="ticket-feature">3-Day Festival Access</li>
-                                <li class="ticket-feature">Luxury Glamping</li>
-                                <li class="ticket-feature">All Workshops</li>
-                                <li class="ticket-feature">VIP Welcome Pack</li>
-                                <li class="ticket-feature">Exclusive Events</li>
-                                <li class="ticket-feature">Priority Access</li>
-                            </ul>
-                        </div>
-                        <button class="custom-button">SELECT</button>
-                    </div>
+                <!-- Full Lineup Button -->
+                <div class="text-center">
+                    <button type="button" class="custom-button">
+                        FULL LINEUP COMING SOON
+                    </button>
                 </div>
             </div>
         </div>
