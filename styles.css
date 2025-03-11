@@ -1,7 +1,7 @@
 /* Add these @font-face declarations at the top of your CSS file, after the Google Fonts import */
 @font-face {
     font-family: 'Gatwick';
-    src: url('/earth-seed/soulseed/fonts/gatwick.otf') format('opentype');
+    src: url('/earth-seed/soulseed/fonts/Gatwick-JumboSemibold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -23,25 +23,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'YourFirstFont';
-    src: url('../fonts/YourFirstFont.woff2') format('woff2'),
-         url('../fonts/YourFirstFont.woff') format('woff'),
-         url('../fonts/YourFirstFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'YourSecondFont';
-    src: url('../fonts/YourSecondFont.woff2') format('woff2'),
-         url('../fonts/YourSecondFont.woff') format('woff'),
-         url('../fonts/YourSecondFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
     --color-dark: #1a2e33;
