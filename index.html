@@ -18,9 +18,9 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="flex items-center justify-center w-full">
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
+            <div class="flex items-center justify-end w-full">
+                <!-- Desktop Menu (Center-aligned) -->
+                <div class="hidden lg:flex items-center justify-center w-full space-x-8">
                     <div class="h-8 w-px bg-[#e09f3e]/30"></div>
                     <a href="#anasayfa" class="nav-link text-sm">ANA SAYFA</a>
                     <a href="#hakkinda" class="nav-link text-sm">HAKKINDA</a>
@@ -30,7 +30,7 @@
                     <a href="#ekibe-katil" class="nav-link text-sm">EKİBE KATIL</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
+                <!-- Mobile Menu Button (Right-aligned) -->
                 <button id="menu-toggle" class="lg:hidden text-[#fff3b0] focus:outline-none">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path class="menu-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -40,8 +40,8 @@
             </div>
 
             <!-- Mobile Menu Panel -->
-            <div id="mobile-menu" class="lg:hidden hidden mt-4">
-                <div class="flex flex-col items-end space-y-4 py-4 bg-[#1a2e33]/95 backdrop-blur-sm rounded-lg">
+            <div id="mobile-menu" class="lg:hidden hidden mt-4" style="border: none !important; outline: none !important; box-shadow: none !important;">
+                <div class="flex flex-col items-end space-y-4 py-4 px-4 rounded-lg" style="background-color: rgb(61,58,87); backdrop-filter: blur(4px); border: none !important; outline: none !important; box-shadow: none !important;">
                     <a href="#anasayfa" class="nav-link-mobile text-sm">ANA SAYFA</a>
                     <a href="#hakkinda" class="nav-link-mobile text-sm">HAKKINDA</a>
                     <a href="#sanatcilar-rehberler" class="nav-link-mobile text-sm">SANATÇILAR & REHBERLER</a>
@@ -53,10 +53,23 @@
         </div>
     </nav>
 
+    <style>
+    /* Additional CSS to ensure no borders on mobile menu */
+    #mobile-menu, 
+    #mobile-menu div {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    </style>
+
     <!-- Hero Section -->
     <section id="anasayfa" class="hero-section relative min-h-screen flex items-start justify-center">
-        <div class="absolute inset-0 bg-cover bg-center z-0" 
+        <div class="absolute inset-0 bg-cover bg-center z-0 hidden md:block" 
              style="background-image: url('assets/16_9.png');">
+        </div>
+        <div class="absolute inset-0 bg-cover bg-center z-0 block md:hidden" 
+             style="background-image: url('assets/4_3.png');">
         </div>
         <div class="relative z-10 container mx-auto px-4 flex flex-col items-center content-container">
             <img 

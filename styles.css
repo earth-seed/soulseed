@@ -105,8 +105,8 @@ nav {
 }
 
 .nav-link-mobile:hover {
-    color: #574e93;
-    background-color: rgba(87, 78, 147, 0.1);
+    color: var(--color-text);
+    background-color: rgba(224, 159, 62, 0.1);
 }
 
 .nav-line-horizontal {
@@ -663,20 +663,141 @@ img {
 
     #mobile-menu {
         position: fixed;
-        top: 80px;  /* Adjust based on your nav height */
+        top: 80px;
         right: 0;
         width: 100%;
-        background-color: rgba(51, 92, 103, 0.95);  /* Using your --color-main with opacity */
+        background-color: rgb(61, 58, 87) !important; /* Changed to purple */
         backdrop-filter: blur(8px);
         border-radius: 0.5rem;
         margin-top: 0.5rem;
         padding: 1rem;
         z-index: 49;
+        border: none !important; /* Added to remove border */
     }
 
+    #mobile-menu div, 
+    #mobile-menu * {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Update the hover state for mobile links to match the purple theme */
     .nav-link-mobile:hover {
         color: var(--color-text);
-        background-color: rgba(224, 159, 62, 0.1);  /* Using your --color-accent with opacity */
+        background-color: rgba(224, 159, 62, 0.1);  /* Gold with opacity */
+    }
+
+    /* Lokasyon section optimizations */
+    #lokasyon-ulasim {
+        padding: 3rem 1rem !important;
+    }
+    
+    #lokasyon-ulasim .max-w-6xl {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    #lokasyon-ulasim h2 {
+        font-size: 2.5rem !important;
+        letter-spacing: 0.1em !important;
+        padding: 0 1rem !important;
+    }
+    
+    #lokasyon-ulasim .space-y-6 p {
+        font-size: 1rem !important;
+        padding: 0 1rem !important;
+    }
+    
+    #lokasyon-ulasim .swiper {
+        height: 300px !important;
+    }
+    
+    /* Ekibe Katıl section optimizations */
+    #sen-de-bize-katil {
+        padding: 3rem 1rem !important;
+    }
+    
+    #sen-de-bize-katil .max-w-4xl {
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    
+    #sen-de-bize-katil h2 {
+        font-size: 2.5rem !important;
+        letter-spacing: 0.1em !important;
+    }
+    
+    #sen-de-bize-katil .text-xl {
+        font-size: 1rem !important;
+    }
+    
+    #sen-de-bize-katil .feature-list {
+        padding: 0 !important;
+    }
+    
+    #sen-de-bize-katil .feature-item {
+        font-size: 1rem !important;
+    }
+}
+
+/* Additional iPad-specific optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Lokasyon section iPad optimizations */
+    #lokasyon-ulasim {
+        padding: 4rem 2rem !important;
+    }
+    
+    #lokasyon-ulasim h2 {
+        font-size: 3rem !important;
+    }
+    
+    #lokasyon-ulasim .swiper {
+        height: 400px !important;
+    }
+    
+    /* Ekibe Katıl section iPad optimizations */
+    #sen-de-bize-katil {
+        padding: 4rem 2rem !important;
+    }
+    
+    #sen-de-bize-katil .max-w-4xl {
+        padding: 2rem !important;
+    }
+    
+    #sen-de-bize-katil h2 {
+        font-size: 3rem !important;
+    }
+    
+    #sen-de-bize-katil .text-xl {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Small mobile optimizations */
+@media (max-width: 640px) {
+    /* Lokasyon section small mobile optimizations */
+    #lokasyon-ulasim h2 {
+        font-size: 2rem !important;
+        letter-spacing: 0.05em !important;
+    }
+    
+    #lokasyon-ulasim .swiper {
+        height: 250px !important;
+    }
+    
+    /* Ekibe Katıl section small mobile optimizations */
+    #sen-de-bize-katil h2 {
+        font-size: 2rem !important;
+        letter-spacing: 0.05em !important;
+    }
+    
+    #sen-de-bize-katil .max-w-4xl {
+        padding: 1rem !important;
+    }
+    
+    #sen-de-bize-katil .feature-item {
+        font-size: 0.9rem !important;
     }
 }
 
