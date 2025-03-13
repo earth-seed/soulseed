@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preload" href="/soulseed/fonts/Gatwick-JumboSemibold.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/soulseed/fonts/westiva-regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/soulseed/fonts/westiva-bold.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/fonts/Gatwick-JumboSemibold.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/fonts/westiva-regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/fonts/westiva-bold.otf" as="font" type="font/otf" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulSeed Festival</title>
@@ -16,17 +16,18 @@
 <body class="bg-[#335c67]">
     <div id="blur-overlay"></div>
     <!-- Navigation -->
-    <nav class="fixed top-0 right-0 z-50">
+    <nav>
         <div class="nav-container">
-            <div class="flex items-center justify-end">
+            <div class="flex items-center justify-center w-full">
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-8">
                     <div class="h-8 w-px bg-[#e09f3e]/30"></div>
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="join.html" class="nav-link">Join Us</a>
-                    <a href="lineup.html" class="nav-link">Lineup</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="#anasayfa" class="nav-link text-sm">ANA SAYFA</a>
+                    <a href="#hakkinda" class="nav-link text-sm">HAKKINDA</a>
+                    <a href="#sanatcilar-rehberler" class="nav-link text-sm">SANATÇILAR & REHBERLER</a>
+                    <a href="#lokasyon-ulasim" class="nav-link text-sm">LOKASYON & ULAŞIM</a>
+                    <a href="#soru-cevap" class="nav-link text-sm">SORU&CEVAP</a>
+                    <a href="#ekibe-katil" class="nav-link text-sm">EKİBE KATIL</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -41,18 +42,19 @@
             <!-- Mobile Menu Panel -->
             <div id="mobile-menu" class="lg:hidden hidden mt-4">
                 <div class="flex flex-col items-end space-y-4 py-4 bg-[#1a2e33]/95 backdrop-blur-sm rounded-lg">
-                    <a href="index.html" class="nav-link-mobile">Home</a>
-                    <a href="join.html" class="nav-link-mobile">Join Us</a>
-                    <a href="lineup.html" class="nav-link-mobile">Lineup</a>
-                    <a href="about.html" class="nav-link-mobile">About</a>
-                    <a href="faq.html" class="nav-link-mobile">FAQ</a>
+                    <a href="#anasayfa" class="nav-link-mobile text-sm">ANA SAYFA</a>
+                    <a href="#hakkinda" class="nav-link-mobile text-sm">HAKKINDA</a>
+                    <a href="#sanatcilar-rehberler" class="nav-link-mobile text-sm">SANATÇILAR & REHBERLER</a>
+                    <a href="#lokasyon-ulasim" class="nav-link-mobile text-sm">LOKASYON & ULAŞIM</a>
+                    <a href="#soru-cevap" class="nav-link-mobile text-sm">SORU&CEVAP</a>
+                    <a href="#ekibe-katil" class="nav-link-mobile text-sm">EKİBE KATIL</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section relative min-h-screen flex items-start justify-center">
+    <section id="anasayfa" class="hero-section relative min-h-screen flex items-start justify-center">
         <div class="absolute inset-0 bg-cover bg-center z-0" 
              style="background-image: url('assets/16_9.png');">
         </div>
@@ -63,36 +65,41 @@
                 class="logo-image transform transition-all duration-300 hover:scale-105"
             >
             <div class="flex flex-col items-center space-y-12">
-                <h2 class="festival-date text-white text-2xl font-extrabold tracking-wider transform transition-all duration-300 hover:scale-105">
-                    13-25 Temmuz | Yenice Vadi
-                </h2>
-                <h2 class="festival-date text-white text-2xl font-extrabold tracking-wider transform transition-all duration-300 hover:scale-105">
+                <h2 class="festival-date text-2xl font-bold tracking-wider transform transition-all duration-300 hover:scale-105" 
+                    style="font-family: sans-serif; color: #1a2e33 !important;">
                     MUSIC & HEALING
+                </h2>
+                <h2 class="festival-date text-white text-2xl font-bold tracking-wider transform transition-all duration-300 hover:scale-105" 
+                    style="font-family: sans-serif;">
+                    11-14 Temmuz / Yenice Vadi / Türkiye
                 </h2>
             </div>
         </div>
     </section>
 
     <!-- Introduction Section -->
-    <section class="introduction-section text-center relative overflow-hidden">
+    <section id="hakkinda" class="introduction-section text-center relative overflow-hidden">
         <div class="container mx-auto max-w-4xl relative">
             <div class="flex flex-col items-center">
                 <div class="content-box">
                     <p class="text-2xl leading-relaxed text-white relative z-10">
-                        Join us for a transformative journey at the intersection of music, healing, and art. SoulSeed Festival brings together Anatolian and indigenous cultures in the heart of Yenice Vadi, creating a sacred space for connection, creativity, and community healing.
+                        Soul Seed Festival Anatolia, müziğin, sanatın ve şifanın bir araya gelerek kolektif bilinçle buluştuğu benzersiz bir deneyim sunuyor. Geçmişin bilgisini ve tecrübesini geleceğin vizyonuyla harmanlayan bu festival, şifa sanatçıları ve müzisyenler eşliğinde hep beraber iyileşme, dönüşme ve ortak bilinç için kutsal bir alan yaratıyor.
+                    </p>
+                    <p class="text-2xl leading-relaxed text-white relative z-10 mt-8">
+                        11-14 Temmuz tarihleri arasında, Yenice Vadi'nin büyüleyici doğasında gerçekleşecek olan buluşma boyunca, onlarca müzisyen ve şifa sanatçısıyla bir araya gelerek, toplumsal şifa ve birlik duygusunu yeniden keşfedip paylaşacağız, kutlayacağız.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Guests Section -->
-    <section class="py-16 bg-[#0d1618]">
+    <!-- Concerts Section -->
+    <section id="sanatcilar-rehberler" class="py-16" style="background-color: rgb(61,58,87);">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto">
-                <!-- Featured Guests Title -->
+                <!-- Concerts Title -->
                 <div class="text-center mb-16 w-full">
-                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">Featured Guests</h2>
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">KONSERLER</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
                     <!-- Guest Card 1 -->
@@ -150,185 +157,190 @@
                     </div>
                 </div>
                 
-                <!-- New row of 5 smaller cards -->
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-24">
-                    <!-- Smaller guest card 1 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative">
-                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
-                        </div>
-                        <div class="p-4 relative text-center">
-                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
-                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
-                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
-                                Role/Description
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Smaller guest card 2 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative">
-                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
-                        </div>
-                        <div class="p-4 relative text-center">
-                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
-                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
-                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
-                                Role/Description
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Smaller guest card 3 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative">
-                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
-                        </div>
-                        <div class="p-4 relative text-center">
-                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
-                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
-                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
-                                Role/Description
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Smaller guest card 4 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative">
-                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
-                        </div>
-                        <div class="p-4 relative text-center">
-                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
-                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
-                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
-                                Role/Description
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Smaller guest card 5 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative">
-                            <img src="/path-to-image.jpg" alt="Guest Name" class="w-full h-48 object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#2a4147] to-transparent"></div>
-                        </div>
-                        <div class="p-4 relative text-center">
-                            <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-2 tracking-[0.15em] uppercase font-normal">Guest Name</h3>
-                            <div class="w-12 h-0.5 bg-[#e09f3e]/30 mb-3 mx-auto"></div>
-                            <p class="font-marcellus text-white text-sm tracking-wide leading-relaxed">
-                                Role/Description
-                            </p>
-                        </div>
-                    </div>
+                <!-- Divider -->
+                <div class="w-full h-px bg-[#e09f3e]/30 my-16 mx-auto"></div>
+                
+                <!-- Healing Workshops & Guides Title -->
+                <div class="text-center mb-16 w-full">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">ŞİFA ATÖLYELER & REHBERLER</h2>
                 </div>
+                
+                <!-- Healing Workshops & Guides Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+                    <!-- Workshop Card 1 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="/path-to-image.jpg" alt="Workshop Name" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                        </div>
+                        <div class="p-8 relative text-center">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                            </div>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Workshop Name</h3>
+                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
+                                Workshop description
+                            </p>
+                        </div>
+                    </div>
 
-                <!-- Full Lineup Button -->
-                <div class="text-center mt-24">
-                    <button type="button" style="color: white; border-color: white;" class="custom-button">
-                        FULL LINEUP COMING SOON
-                    </button>
+                    <!-- Workshop Card 2 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="/path-to-image.jpg" alt="Workshop Name" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                        </div>
+                        <div class="p-8 relative text-center">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                            </div>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Workshop Name</h3>
+                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
+                                Workshop description
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Workshop Card 3 -->
+                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="/path-to-image.jpg" alt="Workshop Name" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                        </div>
+                        <div class="p-8 relative text-center">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
+                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
+                            </div>
+                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Workshop Name</h3>
+                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
+                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
+                                Workshop description
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section style="background-color: #7a6e7f;" class="py-16 relative">
-        <!-- Dark overlay -->
-        <div class="absolute inset-0 bg-[#7a6e7f]/95"></div>
+    <!-- Call to Action Section with Background Image -->
+    <section id="sen-de-bize-katil" class="py-16 bg-cover bg-center relative" style="background-image: url('assets/images/yenice/7.jpg'); background-color: transparent !important;">
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-black/60"></div>
         
         <div class="container mx-auto px-4 relative z-10">
-            <!-- Content Box with Blur Background -->
-            <div class="max-w-4xl mx-auto p-12 rounded-lg" style="background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <!-- Content Box with Specified Background Color - No Border -->
+            <div class="max-w-4xl mx-auto p-12 rounded-lg" style="background-color: rgba(97,121,149,0.85) !important; backdrop-filter: blur(4px);">
                 <!-- Introduction Text -->
                 <div class="max-w-2xl mx-auto mb-16 text-center">
-                    <p class="font-cormorant text-2xl leading-relaxed text-white">
-                        Experience three transformative days of music, healing, and community in the heart of Yenice Vadi. Immerse yourself in a carefully curated journey of:
+                    <h2 class="font-cormorant text-4xl text-[#e09f3e] mb-6 tracking-wider uppercase">SEN DE BİZE KATIL!</h2>
+                    <p class="font-marcellus text-xl leading-relaxed text-white">
+                        Yenice Vadi'nin harika doğasında dağların eteklerinde, ormanın yanı başında üç gün üç gece boyunca müzik, şifa ve kabile zamanı yaşayın. Bütçenize uygun konaklama seçenekleriyle harika bir tatil zamanını, hem dönüşüm hem de eğlenceyle değerlendirin. Kendinizi dikkatlice düzenlenmiş bu yolculuğa bırakın:
                     </p>
                 </div>
 
                 <!-- Festival Features List -->
                 <div class="max-w-lg mx-auto">
-                    <ul class="feature-list grid grid-cols-1 gap-6 text-white text-center">
+                    <ul class="feature-list grid grid-cols-1 gap-4 text-white text-center">
                         <li class="feature-item">
-                            <span class="font-marcellus tracking-wide text-lg">Sacred Music Ceremonies</span>
+                            <span class="font-marcellus tracking-wide text-lg">Her gün Sabah Yogası</span>
                         </li>
                         <li class="feature-item">
-                            <span class="font-marcellus tracking-wide text-lg">Sound Healing Sessions</span>
+                            <span class="font-marcellus tracking-wide text-lg">Hep birlikte OM Banyosu</span>
                         </li>
                         <li class="feature-item">
-                            <span class="font-marcellus tracking-wide text-lg">Indigenous Wisdom Sharing</span>
+                            <span class="font-marcellus tracking-wide text-lg">Nefes Seansları</span>
                         </li>
                         <li class="feature-item">
-                            <span class="font-marcellus tracking-wide text-lg">Transformative Workshops</span>
+                            <span class="font-marcellus tracking-wide text-lg">Ses Banyosu ve Yolculuğu</span>
                         </li>
                         <li class="feature-item">
-                            <span class="font-marcellus tracking-wide text-lg">Community Gatherings</span>
+                            <span class="font-marcellus tracking-wide text-lg">Sema Atölyesi</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Dadirri Derin Dinleyiş Meditasyonu</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">İlkel Sesler ve Vokal Aktivasyon atölyesi</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Hep birlikte Akustik Kolektif Müzik-Meşk</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Masaj - Reiki</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Akşam konserleri ve Ekstatik dans…</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Özenle hazırlanmış sağlıklı yemekler, içecekler…</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="font-marcellus tracking-wide text-lg">Ve daha fazla dönüştücü atölye ve şifa seanları…</span>
                         </li>
                     </ul>
+                    
+                    <div class="text-center mt-8">
+                        <p class="font-marcellus text-white text-lg">
+                            11-14 Temmuz'da Güney Ege'nin en güzel buluşma yerlerinden Yenice Vadi'de.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Location Section -->
-    <section style="background-color: #1a2e33" class="py-16">
+    <section id="lokasyon-ulasim" class="py-16" style="background-color: rgb(61,58,87);">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
                 <!-- Location Section Title -->
-                <div class="text-center mb-16">
-                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">Location</h2>
+                <div class="text-center mb-12">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">FESTİVAL ALANI VE KONAKLAMA / YENİCE VADİ</h2>
                 </div>
                 
-                <!-- Grid container for image and description -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <!-- Image Carousel -->
-                    <div class="swiper rounded-lg">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="assets/images/yenice/1.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/yenice/2.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/yenice/3.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/yenice/4.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/yenice/5.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/images/yenice/6.png" alt="Yenice Vadi" class="w-full h-[500px] object-cover">
-                            </div>
+                <!-- Location Description -->
+                <div class="space-y-6 mb-12 max-w-4xl mx-auto">
+                    <p class="font-marcellus text-white text-lg leading-relaxed text-center">
+                        Huzurlu bir sığınak arayanlar için Yenice Vadi, sakin bir Türk vadisinde yer alır ve mükemmel bir kaçış noktası sunar, ağaçlar ve dağların arasında, kıyıya kolay erişimle muhteşem konaklama olanağı sunar.
+                    </p>
+                    <p class="font-marcellus text-white text-lg leading-relaxed text-center">
+                        Vadi, çam, badem, zeytin ve meyve ağaçları gibi çok sayıda ağaçla çevrilidir ve hepsi kuşlar, yaban domuzu, sincap, tavşan, kaplumbağa ve keçi gibi harika bir yaban hayatı yelpazesini kendine çeker.
+                    </p>
+                    <p class="font-marcellus text-white text-lg leading-relaxed text-center">
+                        Vadide saklanmak herkese doğayı en iyi şekilde deneyimleme fırsatı verir. Kuş cıvıltılarıyla uyanmak, verandalarda huzurlu akşamlar geçirmek ve ister yürüyerek ister arabayla muhteşem kırsalı keşfetmek mükemmel bir sığınak sağlar.
+                    </p>
+                </div>
+                
+                <!-- Larger Image Carousel -->
+                <div class="swiper rounded-lg max-w-5xl mx-auto">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/1.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
                         </div>
-                        <!-- Navigation Arrows -->
-                        <div class="swiper-button-next text-white"></div>
-                        <div class="swiper-button-prev text-white"></div>
-                        <!-- Pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/2.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/3.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/4.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/5.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/yenice/6.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                        </div>
                     </div>
-
-                    <!-- Location Description -->
-                    <div class="space-y-6">
-                        <p class="font-marcellus text-white text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
-                            Nestled in the heart of Turkey's pristine nature, Yenice Vadi is a sacred valley where ancient wisdom meets natural beauty. This enchanting location provides the perfect backdrop for our transformative festival experience.
-                        </p>
-                        <p class="font-marcellus text-white text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
-                            Surrounded by majestic mountains and blessed with crystal-clear streams, this valley has been a gathering place for spiritual seekers and nature lovers for generations. Its serene atmosphere and powerful energy create an ideal environment for deep connection and inner exploration.
-                        </p>
-                        <p class="font-marcellus text-white text-lg leading-relaxed relative z-10 hover:scale-105 transform transition-all duration-300">
-                            The valley's natural amphitheaters and peaceful groves will host our ceremonies, workshops, and performances, while its starlit nights will witness our community gatherings and celebrations.
-                        </p>
-                    </div>
+                    <!-- Navigation Arrows -->
+                    <div class="swiper-button-next text-white"></div>
+                    <div class="swiper-button-prev text-white"></div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -347,48 +359,220 @@
         ></iframe>
     </section>
 
-    <!-- Mailing List Section -->
-    <section style="background-color: #7a6e7f" class="py-16">
+    <!-- FAQ Section with Matching Background Color -->
+    <section id="soru-cevap" style="background-color: #617995" class="py-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="font-cormorant text-5xl text-[#e09f3e] mb-6 tracking-[0.2em] uppercase font-light">Be the first to know when tickets go live</h2>
-                <p class="font-marcellus text-white text-lg mb-12 leading-relaxed">
-                    Join our sacred circle to receive festival updates, early bird tickets, and exclusive content
-                </p>
-                
-                <!-- Email Signup Form -->
-                <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
-                    <input 
-                        type="email" 
-                        placeholder="Enter your email" 
-                        class="w-full md:w-96 px-6 py-4 bg-transparent border-2 border-[#fff3b0]/30 rounded-lg text-[#fff3b0] placeholder-[#fff3b0]/50 focus:outline-none focus:border-[#e09f3e] transition-colors duration-300 font-marcellus"
-                    >
-                    <button class="w-full md:w-auto px-8 py-4 border-2 border-[#e09f3e] bg-[#e09f3e] text-[#1a2e33] font-marcellus rounded-lg transition-all duration-300 uppercase tracking-wider hover:bg-transparent hover:text-[#e09f3e] hover:border-[#e09f3e] hover:transform hover:-translate-y-0.5">
-                        Subscribe
-                    </button>
+            <div class="max-w-6xl mx-auto">
+                <!-- FAQ Section Title -->
+                <div class="text-center mb-16">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">SORULAR & CEVAP</h2>
                 </div>
                 
-                <!-- Privacy Note -->
-                <p class="font-marcellus text-[#fff3b0]/70 text-sm mt-6">
-                    We respect your privacy and will never share your information
-                </p>
-
-                <!-- Social Media Section -->
-                <div class="mt-16">
-                    <div class="flex justify-center space-x-12">
-                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
-                            <i class="fab fa-instagram text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
-                            <i class="fab fa-facebook text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
-                            <i class="fab fa-twitter text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-[#fff3b0] hover:text-[#e09f3e] transition-colors duration-300">
-                            <i class="fab fa-youtube text-3xl"></i>
-                        </a>
+                <!-- FAQ Accordion Items -->
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Festival alanı nerede? Nasıl ulaşabilirim?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white space-y-4">
+                                <p>Festivalimiz Muğla'nın Ula ilçesine bağlı Yenice köyünde bulunan Yenice Vadi isimli İnziva Merkezinde gerçekleşecek. Bodrum Havalimanı'na 1 saat 20 dakika ve Dalaman havalimanına 1.5 Saat uzaklıkta bulunuyor.</p>
+                                <p>Bodrum-Milas havaalanına indikten sonra Muğla Otogarı'na Muttaş ve ya da Havaş servis ile ulaşabilirsiniz.</p>
+                                <p>Dalaman Havaalanına indikten sonra Gökova Kavşağına kadar Muttaş ya da Havaş servis ile gelebilirsiniz.</p>
+                                <p>Festival Günlerinde Muğla Otogarı ve Gökova Kavşağından shuttle servis ile festival alanına erişim sağlayabilirsiniz.</p>
+                                <p>Kendi aracınızla harita lokasyon yardımıyla kolaylıkla gelebilirsiniz. Tüm yol boyunca telefon ve internet sinyali bulunuyor.</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Festival alanına pet hayvanımı getirebilir miyim?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white">
+                                <p>Kendi hayvanınızı getirebilirsiniz. Festival süresince bazı çalışmalar sessiz bir ortamda gerçekleştirilmek durumunda. Buna benzer durumlarda bazı alanlara evcil köpeklerin girişi için festival görevlilerine danışmanız ve bilgilendirmeniz gerekebilir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Kendi aracımı park edebileceğimiz yer var mı?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white">
+                                <p>Evet var.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Günde kaç öğün yemek olacak?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white space-y-4">
+                                <p>Her gün sabah kahvaltısı 9.30 - 11.30 arasında ve akşam yemeği 18.00 - 20.00 arasında servis edilecektir ve bu öğünler ücrete dahildir.</p>
+                                <p>Gün içerisinde ara öğün yemek isteyenler için ücretli yemek ve atıştırmalık standları olacaktır.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Alanda alkol servisi olacak mı?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white space-y-4">
+                                <p>Buluşmamızda alkol servisi olmayacak. Dışarıdan alkol getirilmesine izin verilmeyecek. Ortak alanlarda herhangi bir uyarıcı madde kullanımına izin verilmeyecek. "Bilinçli buluşma" son yıllarda ortaya çıkan bir kavram. Alkol ve diğer uyarıcı maddelerin etkisi altında olmadan eğlenebilmeyi ve anı yaşamayı anlatıyor.</p>
+                                <p>Festival alanı içerisinde alkolsüz birçok içecek seçeneği bulundurulacaktır.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Festival alanında kendi çadırımla konaklayabilir miyim? Açık alanda Tuvalet ve Duş var mı?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white">
+                                <p>Yenice Vadi içerisinde kendi çadırıyla konaklamak isteyenler için özel olarak ayrılmış bir bölge bulunuyor. Bu alanın tamamı gölgelikle kaplı olduğu için güneşten ışığından çok etkilenmeyecek bir alan. Çadır alanındakiler için kullanabilecekleri tuvalet ve duşlar var.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-container bg-[#1a2e33]/80 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="faq-question cursor-pointer p-6 border-l-4 border-[#e09f3e] flex justify-between items-center">
+                            <h3 class="font-cormorant text-2xl text-[#e09f3e] pr-4">Festival alanına kendi karavanımla gelebilir miyim?</h3>
+                            <span class="faq-icon text-[#e09f3e] text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer hidden border-l-4 border-[#e09f3e]">
+                            <div class="px-6 pb-6 font-marcellus text-white">
+                                <p>Evet gelebilirsiniz. Yenice Vadi'de kendi karavanınızı konumlandırabileceğiniz alanlar bulunuyor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript for FAQ accordion functionality -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', function() {
+                        // Get the parent container and answer element
+                        const container = this.parentElement;
+                        const answer = this.nextElementSibling;
+                        const icon = this.querySelector('.faq-icon');
+                        
+                        // Check if this FAQ is already open
+                        const isOpen = answer.classList.contains('active');
+                        
+                        // Close all FAQs
+                        document.querySelectorAll('.faq-answer').forEach(item => {
+                            item.classList.add('hidden');
+                            item.classList.remove('active');
+                        });
+                        
+                        document.querySelectorAll('.faq-icon').forEach(icon => {
+                            icon.textContent = '+';
+                        });
+                        
+                        // If the clicked FAQ wasn't open, open it
+                        if (!isOpen) {
+                            answer.classList.remove('hidden');
+                            answer.classList.add('active');
+                            icon.textContent = '−'; // Using minus sign
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+
+    <!-- Ekibe Katıl Section -->
+    <section id="ekibe-katil" style="background-color: #7a6e7f" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">EKİBE KATIL</h2>
+                    <p class="font-marcellus text-white text-lg mt-6 leading-relaxed">
+                        Soul Seed Festivali için alanda gönüllü olarak ekibe katılabilirsin. Değişik pozisyonlar için gönüllülerden oluşan bir ekip oluşturacağız.
+                    </p>
+                </div>
+                
+                <!-- Simplified Volunteer Application Form -->
+                <div class="bg-[#1a2e33]/40 rounded-lg p-8 backdrop-blur-sm">
+                    <form class="space-y-6">
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="block font-marcellus text-[#fff3b0] mb-2">Ad Soyad</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="w-full px-4 py-3 bg-transparent border-2 border-[#fff3b0]/30 rounded-lg text-[#fff3b0] placeholder-[#fff3b0]/50 focus:outline-none focus:border-[#e09f3e] transition-colors duration-300 font-marcellus"
+                                placeholder="Adınız ve soyadınız"
+                                required
+                            >
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block font-marcellus text-[#fff3b0] mb-2">E-posta</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="w-full px-4 py-3 bg-transparent border-2 border-[#fff3b0]/30 rounded-lg text-[#fff3b0] placeholder-[#fff3b0]/50 focus:outline-none focus:border-[#e09f3e] transition-colors duration-300 font-marcellus"
+                                placeholder="E-posta adresiniz"
+                                required
+                            >
+                        </div>
+                        
+                        <!-- About Yourself Field -->
+                        <div>
+                            <label for="about" class="block font-marcellus text-[#fff3b0] mb-2">Kendinizden Bahsedin</label>
+                            <textarea 
+                                id="about" 
+                                name="about" 
+                                rows="5" 
+                                class="w-full px-4 py-3 bg-transparent border-2 border-[#fff3b0]/30 rounded-lg text-[#fff3b0] placeholder-[#fff3b0]/50 focus:outline-none focus:border-[#e09f3e] transition-colors duration-300 font-marcellus resize-none"
+                                placeholder="Biraz kendinizden bahsedin, deneyimleriniz, ilgi alanlarınız..."
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="pt-4">
+                            <button type="submit" class="w-full px-8 py-4 border-2 border-[#e09f3e] bg-[#e09f3e] text-[#1a2e33] font-marcellus rounded-lg transition-all duration-300 uppercase tracking-wider hover:bg-transparent hover:text-[#e09f3e] hover:border-[#e09f3e] hover:transform hover:-translate-y-0.5">
+                                BAŞVURU GÖNDER
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Additional Info -->
+                    <p class="font-marcellus text-[#fff3b0]/70 text-sm mt-6 text-center">
+                        Başvurunuz alındıktan sonra sizinle iletişime geçeceğiz.
+                    </p>
                 </div>
             </div>
         </div>
