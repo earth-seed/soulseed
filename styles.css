@@ -68,7 +68,7 @@ nav {
     color: #ffffff !important;
     position: relative;
     padding-bottom: 2px;
-    font-size: 1.5rem;
+    font-size: 10px !important;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     transition: color 0.3s ease;
@@ -95,7 +95,7 @@ nav {
 }
 
 .nav-link-mobile {
-    font-size: 1.5rem;
+    font-size: 10px !important;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     padding: 0.75rem 2.5rem;
