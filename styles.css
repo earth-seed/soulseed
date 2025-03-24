@@ -1,7 +1,7 @@
 /* Add these @font-face declarations at the top of your CSS file, after the Google Fonts import */
 @font-face {
     font-family: 'Gatwick';
-    src: url('/soulseed/fonts/Gatwick-JumboSemibold.otf') format('opentype');
+    src: url('/fonts/Gatwick-JumboSemibold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Westiva';
-    src: url('/soulseed/fonts/westiva-regular.otf') format('opentype');
+    src: url('/fonts/westiva-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'Westiva';
-    src: url('/soulseed/fonts/westiva-bold.otf') format('opentype');
+    src: url('/fonts/westiva-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
