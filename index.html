@@ -3,6 +3,10 @@
 <head>
     <link rel="preload" href="/soulseed/fonts/Gatwick-JumboSemibold.otf" as="font" type="font/otf" crossorigin>
     <link rel="preload" href="/soulseed/fonts/recoleta.otf" as="font" type="font/otf" crossorigin>
+    <!-- Preload critical images -->
+    <link rel="preload" href="assets/SS_Logo.png" as="image">
+    <link rel="preload" href="assets/16_9.png" as="image" media="(min-width: 768px)">
+    <link rel="preload" href="assets/4_3.png" as="image" media="(max-width: 767px)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulSeed Festival</title>
@@ -73,7 +77,7 @@
         <div class="hero-logo-container">
             <!-- Text above logo -->
             <div class="hero-text-above">
-                <h1>11-13 Temmuz - Muğla, Yenice Vadisi - Türkiye</h1>
+                <h1 style="color: #000054;">11-13 Temmuz - Muğla, Yenice Vadisi - Türkiye</h1>
             </div>
             
             <img 
@@ -84,7 +88,7 @@
             
             <!-- Text below logo -->
             <div class="hero-text-below">
-                <p class="subtitle-text">AMAZON'DAN ANADOLU'YA KUTSAL SESLER YOLCULUĞU</p>
+                <p class="subtitle-text" style="color: #fbd0a0;">AMAZON'DAN ANADOLU'YA KUTSAL SESLER YOLCULUĞU</p>
             </div>
         </div>
     </section>
@@ -92,19 +96,15 @@
     <!-- Introduction Section -->
     <section id="hakkinda" class="introduction-section text-center relative overflow-hidden">
         <div class="container mx-auto max-w-7xl relative">
-            <div class="flex flex-col items-center space-y-6">
+            <div class="flex flex-col items-center space-y-3">
                 <p class="text-2xl leading-snug text-white relative z-10">
                     Bizler, sesiyle şifa getiren, niyetiyle alan açan ailelerin çocuklarıyız.<br>
                     Geçmişin bilgeliğini hatırlayan, geleceğin vizyonuyla harmanlayan, ve hatırlatan bir kabileyiz.<br>
                     SOUL SEED bir hatırlayış, bir davet...
                 </p>
                 <p class="text-2xl leading-snug text-white relative z-10">
-                    Kadim ezgilerimizle semaya durduğumuz, Amazon Ormanlarının ruhunu nefesle, sesle, dansla karşıladığımız, bir buluşma SOUL SEED.
-                </p>
-                <p class="text-2xl leading-snug text-white relative z-10">
-                    Yawanawa kardeşlerin Amazon'dan taşıdığı şifalı müzikleri, TÜMATA'nın kalpten gelen ilahi ezgileri ve her bir katılımcının getirdiği niyetle bu alan hepimizindir.
-                </p>
-                <p class="text-2xl leading-snug text-white relative z-10">
+                    Kadim ezgilerimizle semaya durduğumuz, Amazon Ormanlarının ruhunu nefesle, sesle, dansla karşıladığımız, bir buluşma SOUL SEED.<br><br>
+                    Yawanawa kardeşlerin Amazon'dan taşıdığı şifalı müzikleri, TÜMATA'nın kalpten gelen ilahi ezgileri ve her bir katılımcının getirdiği niyetle bu alan hepimizindir.<br><br>
                     11-13 Temmuz tarihleri arasında, Yenice Vadi'nin büyüleyici doğasında gerçekleşecek olan buluşmada bir araya gelerek, geçmişimizden taşıdığımız izleri, mirasları keşfedip yenileriyle harmanlayıp birlikte paylaşacağız, kutlayacağız.
                 </p>
             </div>
@@ -123,14 +123,14 @@
                 <!-- Evening Concerts Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 max-w-4xl mx-auto">
                     <!-- TÜMATA Concert -->
-                    <div class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('tumata-modal')">
+                    <div class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl cursor-pointer" onclick="openModal('tumata-modal')">
                         <div class="relative overflow-hidden">
-                            <img src="assets/Tumata.jpg" alt="TÜMATA" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <img src="assets/Tumata.jpg" alt="TÜMATA" class="w-full h-80 object-cover transition-transform duration-500" loading="lazy">
                         </div>
                         <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
                             <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 19:30</p>
-                            <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">ATALARIN SESİ</h3>
-                            <h4 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.1em] uppercase font-medium break-words">TÜMATA</h4>
+                            <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">TÜMATA</h3>
+                            <h4 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.1em] uppercase font-medium break-words">ATALARIN SESİ</h4>
                             <p class="font-marcellus text-white text-base leading-relaxed break-words">
                                 Türk Musikisini Araştırma ve Tanıtma Grubu<br>
                                 ile geleneksel Türk müziğinin derinliklerine yolculuk.
@@ -139,9 +139,9 @@
                     </div>
                     
                     <!-- Yawanawa Concert -->
-                    <div class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('yawanawa-modal')">
+                    <div class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl cursor-pointer" onclick="openModal('yawanawa-modal')">
                         <div class="relative overflow-hidden">
-                            <img src="assets/Yawanawa.jpg" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <img src="assets/Yawanawa.jpg" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500" loading="lazy">
                         </div>
                         <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
                             <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 21:00</p>
@@ -243,7 +243,7 @@
                 <div class="space-y-8 text-white">
                     <!-- 11 Temmuz -->
                     <div class="text-center">
-                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: rgb(61,58,87);">11 Temmuz | PERŞEMBE</h3>
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">11 Temmuz | PERŞEMBE</h3>
                         
                         <div class="space-y-3 mb-6">
                             <p class="font-marcellus text-lg"><strong>17:00 – Açılış Seremonisi</strong></p>
@@ -261,7 +261,7 @@
 
                     <!-- 12 Temmuz -->
                     <div class="text-center">
-                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: rgb(61,58,87);">12 Temmuz | CUMA</h3>
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">12 Temmuz | CUMA</h3>
                         
                         <div class="space-y-3">
                             <p class="font-marcellus text-lg"><strong>08:00 – 09:30 – Sabah Yogası</strong></p>
@@ -281,7 +281,7 @@
 
                     <!-- 13 Temmuz -->
                     <div class="text-center">
-                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: rgb(61,58,87);">13 Temmuz | CUMARTESİ</h3>
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">13 Temmuz | CUMARTESİ</h3>
                         
                         <div class="space-y-3">
                             <p class="font-marcellus text-lg"><strong>09:00 – 10:30 – Arketipsel Hareketler</strong></p>
@@ -303,24 +303,14 @@
             <div class="max-w-6xl mx-auto">
                 <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold text-center mb-16">LOKASYON & ULAŞIM</h2>
                 
-                <div class="space-y-6 mb-12 text-center">
+                <div class="mb-12 text-center">
                     <p class="text-xl text-white leading-relaxed">
-                        Festival alanımız Yenice Vadi huzurlu bir sığınak arayanlar için mükemmel bir kaçış noktası. Dağlar ve ormanlarla çevrili harika doğası ile Gökova körfezi ve Akyaka'ya kolay erişimle muhteşem bir lokasyon.
-                    </p>
-                    
-                    <p class="text-xl text-white leading-relaxed">
-                        Çam, badem, zeytin ve meyve ağaçlarıyla çevrili geniş bahçesi, yüzme havuzu, birçok yaban hayvanın bulunduğu çiftlik alanı, dağların patikalarında yürüyüş imkanı, aynı anda birçok çalışmanın yapılabildiği salonları, ortak alanları, kalabalık ortamda bile herkesin kendine rahatça yer bulabildiği nefes alabildiği harika bir alan.
-                    </p>
-                    
-                    <p class="text-xl text-white leading-relaxed">
-                        Yenice Vadi her bütçeye uygun konaklama seçenekleri sunuyor.
-                    </p>
-                    
-                    <p class="text-xl text-white leading-relaxed">
-                        Festival boyunca konaklamalar paylaşımlı olarak gerçekleştirilecektir.
-                    </p>
-                    
-                    <p class="text-xl text-white leading-relaxed">
+                        Festival alanımız Yenice Vadi huzurlu bir sığınak arayanlar için mükemmel bir kaçış noktası. Dağlar ve ormanlarla çevrili harika doğası ile Gökova körfezi ve Akyaka'ya kolay erişimle muhteşem bir lokasyon.<br><br>
+                        
+                        Çam, badem, zeytin ve meyve ağaçlarıyla çevrili geniş bahçesi, yüzme havuzu, birçok yaban hayvanın bulunduğu çiftlik alanı, dağların patikalarında yürüyüş imkanı, aynı anda birçok çalışmanın yapılabildiği salonları, ortak alanları, kalabalık ortamda bile herkesin kendine rahatça yer bulabildiği nefes alabildiği harika bir alan.<br><br>
+                        
+                        Yenice Vadi her bütçeye uygun konaklama seçenekleri sunuyor.<br>
+                        Festival boyunca konaklamalar paylaşımlı olarak gerçekleştirilecektir.<br>
                         Bütçenize uygun seçeneğini paylaşımlı olarak gerçekleştirebilirsiniz.
                     </p>
                 </div>
@@ -329,22 +319,22 @@
                 <div class="swiper rounded-lg max-w-5xl mx-auto">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="assets/images/yenice/1.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                            <img src="assets/images/yenice/1.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover" loading="lazy">
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/images/yenice/2.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                            <img src="assets/images/yenice/2.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover" loading="lazy">
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/images/yenice/3.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                            <img src="assets/images/yenice/3.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover" loading="lazy">
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/images/yenice/4.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                            <img src="assets/images/yenice/4.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover" loading="lazy">
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/images/yenice/5.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                            <img src="assets/images/yenice/5.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover" loading="lazy">
                         </div>
                         <div class="swiper-slide">
-                            <img src="assets/images/yenice/6.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover">
+                            <img src="assets/images/yenice/6.jpg" alt="Yenice Vadi" class="w-full h-[600px] object-cover" loading="lazy">
                         </div>
                     </div>
                     <!-- Navigation Arrows -->
