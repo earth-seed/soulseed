@@ -1,4 +1,20 @@
-/* Add these @font-face declarations at the top of your CSS file, after the Google Fonts import */
+/* Font declarations */
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/fonts/recoleta.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/fonts/recoleta.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Gatwick';
     src: url('/fonts/Gatwick-JumboSemibold.otf') format('opentype');
@@ -7,29 +23,12 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Westiva';
-    src: url('/fonts/westiva-regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Westiva';
-    src: url('/fonts/westiva-bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-
 :root {
     --color-dark: #1a2e33;
     --color-main: #335c67;
     --color-accent: #e09f3e;
     --color-text: #fff3b0;
-    font-family: 'Westiva', sans-serif;
+    font-family: 'Recoleta', sans-serif;
 }
 
 body {
@@ -39,7 +38,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Westiva', sans-serif;
+    font-family: 'Recoleta', sans-serif;
     font-weight: bold;
     color: var(--color-accent);
 }
@@ -162,7 +161,7 @@ section:hover {
 
 .features-section p {
     color: #ffffff;
-    font-family: 'Westiva', sans-serif;
+    font-family: 'Recoleta', sans-serif;
     font-weight: normal;
 }
 
@@ -520,63 +519,59 @@ section::before {
 }
 
 /* Ticket Section Styles */
-.ticket-card {
-    background-color: #2a4147;
-    border: 1px solid rgba(224, 159, 62, 0.1);
-    border-radius: 1rem;
+#biletler {
     position: relative;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+#biletler::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/images/pattern-bg.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.ticket-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(224, 159, 62, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
 }
 
 .ticket-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border-color: rgba(224, 159, 62, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.ticket-feature {
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.ticket-feature::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #e09f3e;
-}
-
-.price-tag {
-    position: relative;
-    display: inline-block;
-    padding: 0.5rem 2rem;
-    background: rgba(224, 159, 62, 0.1);
-    border-radius: 0.5rem;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
+.ticket-card .p-6 {
+    flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px;
+    flex-direction: column;
 }
 
-img {
-    display: block;
-    margin: 0 auto;
+.ticket-card ul {
+    flex: 1;
 }
 
-/* Desktop logo styles (outside media query) */
-.logo-image {
-    width: auto;
-    height: auto;
-    max-width: 100%;  /* Changed from 112.5% to 100% */
-    max-height: 70vh;  /* Changed from 87.5vh to 70vh */
-    object-fit: contain;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #biletler .grid {
+        gap: 2rem;
+    }
+    
+    .ticket-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
+
 /* Keep existing mobile styles */
 @media (max-width: 768px) {
     html, body {
@@ -595,14 +590,6 @@ img {
         width: 100% !important;
         overflow: hidden !important;
         max-width: 100vw !important;
-    }
-
-    .logo-image {
-        width: 100% !important;
-        max-width: 95% !important;
-        max-height: 80vh !important;
-        object-fit: contain !important;
-        margin: 0 auto !important;
     }
 
     .content-container {
@@ -845,7 +832,7 @@ h1, h2, h3,
 
 /* Also update any Tailwind classes in your HTML that might be setting fonts */
 .text-7xl {
-    font-family: 'Westiva', sans-serif;
+    font-family: 'Recoleta', sans-serif;
 }
 
 /* Ensure the backdrop blur and container styling remains */
@@ -931,7 +918,7 @@ h1, h2, h3,
 
 .introduction-section p {
     color: #ffffff;
-    font-family: 'Westiva', sans-serif;
+    font-family: 'Recoleta', sans-serif;
     font-weight: normal;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     line-height: 1.8;
@@ -955,4 +942,124 @@ h1, h2, h3,
 
 .swiper-pagination-bullet-active {
     background: #e09f3e !important;
+}
+
+/* --- Logo image sizing for hero section --- */
+.logo-image {
+    display: block;
+    margin: 0 auto 2.5rem auto !important;
+    align-self: center !important;
+    width: min(52vw, 520px) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+/* Responsive logo sizing for different screen sizes */
+@media (min-width: 1200px) {
+    .logo-image {
+        width: min(46vw, 575px) !important;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .logo-image {
+        width: min(58vw, 520px) !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-image {
+        width: min(81vw, 460px) !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        width: min(92vw, 400px) !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* --- Hero logo container positioning --- */
+.hero-logo-container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px; /* Space below header */
+    text-align: center;
+    min-height: calc(100vh - 120px);
+}
+
+@media (max-width: 768px) {
+    .hero-logo-container {
+        padding-top: 100px;
+        max-width: 95vw;
+        min-height: calc(100vh - 100px);
+    }
+}
+
+/* --- Hero text styling to match reference image --- */
+.hero-text-above {
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.hero-text-above h1 {
+    font-family: 'Recoleta', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: normal;
+    color: #4a5568; /* Blue-gray color matching the reference */
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.hero-text-below {
+    text-align: center;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.subtitle-text {
+    font-family: 'Recoleta', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 0.15em;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-text-above {
+        margin-bottom: 2rem;
+    }
+    
+    .hero-text-below {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text-above {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-text-below {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Font utility classes */
+.font-recoleta {
+    font-family: 'Recoleta', sans-serif !important;
 }

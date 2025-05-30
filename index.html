@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <link rel="preload" href="/soulseed/fonts/Gatwick-JumboSemibold.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/soulseed/fonts/westiva-regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/soulseed/fonts/westiva-bold.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/soulseed/fonts/recoleta.otf" as="font" type="font/otf" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulSeed Festival</title>
@@ -64,41 +63,49 @@
     </style>
 
     <!-- Hero Section -->
-    <section id="anasayfa" class="hero-section relative min-h-screen flex items-start justify-center">
+    <section id="anasayfa" class="hero-section relative justify-center">
         <div class="absolute inset-0 bg-cover bg-center z-0 hidden md:block" 
              style="background-image: url('assets/16_9.png');">
         </div>
         <div class="absolute inset-0 bg-cover bg-center z-0 block md:hidden" 
              style="background-image: url('assets/4_3.png');">
         </div>
-        <div class="relative z-10 container mx-auto px-4 flex flex-col items-center content-container">
+        <div class="hero-logo-container">
+            <!-- Text above logo -->
+            <div class="hero-text-above">
+                <h1>11-13 Temmuz - Muğla, Yenice Vadisi - Türkiye</h1>
+            </div>
+            
             <img 
                 src="assets/SS_Logo.png" 
                 alt="Soul Seed Festival Anatolia" 
                 class="logo-image transform transition-all duration-300 hover:scale-105"
             >
-            <div class="flex flex-col items-center space-y-12">
-                <h2 class="festival-date text-2xl tracking-wider transform transition-all duration-300 hover:scale-105" 
-                    style="font-family: 'Geneva', sans-serif; font-weight: 1000; color: #1a2e33 !important;">
-                    MUSIC & HEALING
-                </h2>
-                <h2 class="festival-date text-white text-2xl tracking-wider transform transition-all duration-300 hover:scale-105" 
-                    style="font-family: 'Geneva', sans-serif; font-weight: 1000;">
-                    11-14 Temmuz / Yenice Vadi / Türkiye
-                </h2>
+            
+            <!-- Text below logo -->
+            <div class="hero-text-below">
+                <p class="subtitle-text">AMAZON'DAN ANADOLU'YA KUTSAL SESLER YOLCULUĞU</p>
             </div>
         </div>
     </section>
 
     <!-- Introduction Section -->
     <section id="hakkinda" class="introduction-section text-center relative overflow-hidden">
-        <div class="container mx-auto max-w-4xl relative">
-            <div class="flex flex-col items-center">
-                <p class="text-2xl leading-relaxed text-white relative z-10">
-                    Soul Seed Festival Anatolia, müziğin, sanatın ve şifanın bir araya gelerek kolektif bilinçle buluştuğu benzersiz bir deneyim sunuyor. Geçmişin bilgisini ve tecrübesini geleceğin vizyonuyla harmanlayan bu festival, şifa sanatçıları ve müzisyenler eşliğinde hep beraber iyileşme, dönüşme ve ortak bilinç için kutsal bir alan yaratıyor.
+        <div class="container mx-auto max-w-7xl relative">
+            <div class="flex flex-col items-center space-y-6">
+                <p class="text-2xl leading-snug text-white relative z-10">
+                    Bizler, sesiyle şifa getiren, niyetiyle alan açan ailelerin çocuklarıyız.<br>
+                    Geçmişin bilgeliğini hatırlayan, geleceğin vizyonuyla harmanlayan, ve hatırlatan bir kabileyiz.<br>
+                    SOUL SEED bir hatırlayış, bir davet...
                 </p>
-                <p class="text-2xl leading-relaxed text-white relative z-10 mt-8">
-                    11-14 Temmuz tarihleri arasında, Yenice Vadi'nin büyüleyici doğasında gerçekleşecek olan buluşma boyunca, onlarca müzisyen ve şifa sanatçısıyla bir araya gelerek, toplumsal şifa ve birlik duygusunu yeniden keşfedip paylaşacağız, kutlayacağız.
+                <p class="text-2xl leading-snug text-white relative z-10">
+                    Kadim ezgilerimizle semaya durduğumuz, Amazon Ormanlarının ruhunu nefesle, sesle, dansla karşıladığımız, bir buluşma SOUL SEED.
+                </p>
+                <p class="text-2xl leading-snug text-white relative z-10">
+                    Yawanawa kardeşlerin Amazon'dan taşıdığı şifalı müzikleri, TÜMATA'nın kalpten gelen ilahi ezgileri ve her bir katılımcının getirdiği niyetle bu alan hepimizindir.
+                </p>
+                <p class="text-2xl leading-snug text-white relative z-10">
+                    11-13 Temmuz tarihleri arasında, Yenice Vadi'nin büyüleyici doğasında gerçekleşecek olan buluşmada bir araya gelerek, geçmişimizden taşıdığımız izleri, mirasları keşfedip yenileriyle harmanlayıp birlikte paylaşacağız, kutlayacağız.
                 </p>
             </div>
         </div>
@@ -108,92 +115,106 @@
     <section id="sanatcilar-rehberler" class="py-16" style="background-color: rgb(61,58,87);">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto">
-                <!-- Concerts Title -->
+                <!-- Evening Concerts Title -->
                 <div class="text-center mb-16 w-full">
-                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">KONSERLER</h2>
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">AKŞAM AÇIKHAVA KONSERLERİ</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
-                    <!-- Guest Card 1 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                
+                <!-- Evening Concerts Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 max-w-4xl mx-auto">
+                    <!-- TÜMATA Concert -->
+                    <div class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('tumata-modal')">
                         <div class="relative overflow-hidden">
-                            <img src="assets/images/guest1.png" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                            <img src="assets/Tumata.jpg" alt="TÜMATA" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
-                        <div class="p-8 relative text-center">
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
-                            </div>
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Yawanawa</h3>
-                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
-                                Yerli bilgelik taşıyıcısı ve törensel rehber
+                        <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
+                            <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 19:30</p>
+                            <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">ATALARIN SESİ</h3>
+                            <h4 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.1em] uppercase font-medium break-words">TÜMATA</h4>
+                            <p class="font-marcellus text-white text-base leading-relaxed break-words">
+                                Türk Musikisini Araştırma ve Tanıtma Grubu<br>
+                                ile geleneksel Türk müziğinin derinliklerine yolculuk.
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Guest Card 2 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <!-- Yawanawa Concert -->
+                    <div class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('yawanawa-modal')">
                         <div class="relative overflow-hidden">
-                            <img src="assets/images/guest2.png" alt="Islandman" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                            <img src="assets/Yawanawa.jpg" alt="Yawanawa" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
-                        <div class="p-8 relative text-center">
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
-                            </div>
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Islandman</h3>
-                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
-                                Elektronik müzik prodüktörü ve performans sanatçısı
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Guest Card 3 -->
-                    <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="relative overflow-hidden">
-                            <img src="assets/Hemhalolanlar.jpg" alt="Hemhal Olanlar" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
-                        </div>
-                        <div class="p-8 relative text-center">
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                                <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
-                            </div>
-                            <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">Hemhal Olanlar</h3>
-                            <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                            <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
-                                Müziğin ve şifanın buluştuğu özel bir deneyim
+                        <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
+                            <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 21:00</p>
+                            <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">Nawashahu & Ykashahu</h3>
+                            <h4 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.1em] uppercase font-medium break-words">YAWANAWA</h4>
+                            <p class="font-marcellus text-white text-base leading-relaxed break-words">
+                                Amazon'un kalbinden doğan şifalı müzikler,<br>
+                                Yawanawa kardeşlerin sesiyle Anadolu'ya akıyor.
                             </p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Divider -->
-                <div class="w-full h-px bg-[#e09f3e]/30 my-16 mx-auto"></div>
-                
-                <!-- Healing Workshops & Guides Section - Completely Separate -->
-                <div class="w-full text-center mb-16">
-                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">ŞİFA ATÖLYELER & REHBERLER</h2>
+                <!-- TÜMATA Festival Content Title -->
+                <div class="text-center mb-16 w-full">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">TÜMATA ile FESTİVAL İÇERİĞİ</h2>
                 </div>
-            </div>
-        </div>
-
-        <!-- Start a completely new container for the workshop card -->
-        <div class="container mx-auto px-4">
-            <div class="max-w-xs mx-auto mb-24">
-                <div style="background-color: #2a4147" class="group rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/semabey.png" alt="Sinem Beykurt" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div style="background: linear-gradient(to top, #2a4147, transparent)" class="absolute inset-0 opacity-70"></div>
+                
+                <!-- Festival Content Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-24">
+                    <!-- Sufi Music Workshop -->
+                    <div style="background-color: #472b42;" class="rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center cursor-pointer" onclick="openModal('sema-modal')">
+                        <h3 class="font-cormorant text-xl text-[#e09f3e] mb-6 tracking-[0.1em] uppercase font-bold leading-tight break-words hyphens-auto">TASAVVUF MUSİKİSİ İLE 1 GECE SEMA</h3>
+                        <p class="font-marcellus text-white text-sm leading-relaxed break-words">
+                            Türk Tasavvuf Müziği eşliğinde SEMA buluşması.
+                        </p>
                     </div>
-                    <div class="p-8 relative text-center">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 opacity-30">
-                            <img src="assets/images/mandala-small.png" alt="" class="w-full" aria-hidden="true">
-                        </div>
-                        <h3 class="font-cormorant text-3xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-normal">SİNEM BEYKURT</h3>
-                        <div class="w-16 h-0.5 bg-[#e09f3e]/30 mb-5 mx-auto"></div>
-                        <p class="font-marcellus text-white text-lg tracking-wide leading-relaxed">
-                            Sema Workshop
+                    
+                    <!-- Baksi Dance Workshop -->
+                    <div style="background-color: #472b42;" class="rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center cursor-pointer" onclick="openModal('baksi-modal')">
+                        <h3 class="font-cormorant text-xl text-[#e09f3e] mb-6 tracking-[0.1em] uppercase font-bold leading-tight break-words hyphens-auto">BAKSI DANSI ATÖLYESİ</h3>
+                        <p class="font-marcellus text-white text-sm leading-relaxed break-words">
+                            Orta Asya Kadim şamanlık köklerinden gelen müzikli şifa dansı.
+                        </p>
+                    </div>
+                    
+                    <!-- Turkish Music Therapy -->
+                    <div style="background-color: #472b42;" class="rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center cursor-pointer" onclick="openModal('therapy-modal')">
+                        <h3 class="font-cormorant text-xl text-[#e09f3e] mb-6 tracking-[0.1em] uppercase font-bold leading-tight break-words hyphens-auto">TÜRK MÜZİK TERAPİ GELENEĞİ SEANSI</h3>
+                        <p class="font-marcellus text-white text-sm leading-relaxed break-words">
+                            TÜMATA ile Bin yıllık gelenekten gelen makamlarla, Türk müziğiyle ses terapisi.
+                        </p>
+                    </div>
+                    
+                    <!-- Archetypal Movements -->
+                    <div style="background-color: #472b42;" class="rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center cursor-pointer" onclick="openModal('archetypal-modal')">
+                        <h3 class="font-cormorant text-xl text-[#e09f3e] mb-6 tracking-[0.1em] uppercase font-bold leading-tight break-words hyphens-auto">ARŞETİPİKAL HAREKETLER</h3>
+                        <p class="font-marcellus text-white text-sm leading-relaxed break-words">
+                            Otantik Türk ezgileriyle bedenin arketipsel dansı.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Yoga & Ecstatic Dance Title -->
+                <div class="text-center mb-16 w-full">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] tracking-[0.2em] uppercase font-bold">YOGA & EKSTATİK DANS</h2>
+                </div>
+                
+                <!-- Yoga & Dance Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24 max-w-4xl mx-auto items-stretch">
+                    <!-- Morning Yoga -->
+                    <div style="background-color: #595b88;" class="rounded-lg p-8 text-center flex flex-col justify-center cursor-pointer h-full" onclick="openModal('yoga-modal')">
+                        <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-bold break-words hyphens-auto">GÜNE BAŞLANGIÇ<br>SABAH YOGASI</h3>
+                        <p class="font-marcellus text-white text-base leading-relaxed break-words">
+                            Sinem Mengi ile sabah yogası.<br>Esneме, denge, gevşeme...
+                        </p>
+                    </div>
+                    
+                    <!-- Ecstatic Dance -->
+                    <div style="background-color: #595b88;" class="rounded-lg p-8 text-center flex flex-col justify-center cursor-pointer h-full" onclick="openModal('dance-modal')">
+                        <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-bold break-words hyphens-auto">SERBEST AKIŞ<br>EKSTATİK DANS</h3>
+                        <p class="font-marcellus text-white text-base leading-relaxed break-words">
+                            Canlı DJ set ile dijital sesler eşliğinde<br>serbest dans seansı.
                         </p>
                     </div>
                 </div>
@@ -201,64 +222,75 @@
         </div>
     </section>
 
-    <!-- Call to Action Section with Background Image -->
-    <section id="sen-de-bize-katil" class="py-16 bg-cover bg-center relative" style="background-image: url('assets/images/yenice/7.jpg'); background-color: transparent !important;">
+    <!-- Program Section with Background Image -->
+    <section id="program" class="py-16 bg-cover bg-center relative" style="background-image: url('assets/images/yenice/7.jpg'); background-color: transparent !important;">
         <!-- Dark overlay for better text readability -->
         <div class="absolute inset-0 bg-black/60"></div>
         
         <div class="container mx-auto px-4 relative z-10">
-            <!-- Content Box with Specified Background Color - No Border -->
-            <div class="max-w-4xl mx-auto p-12 rounded-lg" style="background-color: rgba(97,121,149,0.85) !important; backdrop-filter: blur(4px);">
-                <!-- Introduction Text -->
-                <div class="max-w-2xl mx-auto mb-16 text-center">
-                    <h2 class="font-cormorant text-4xl text-[#e09f3e] mb-6 tracking-wider uppercase">SEN DE BİZE KATIL!</h2>
+            <!-- Content Box with Specified Background Color -->
+            <div class="max-w-5xl mx-auto p-12 rounded-lg" style="background-color: rgba(97,121,149,0.85) !important; backdrop-filter: blur(4px);">
+                <!-- Program Title -->
+                <div class="text-center mb-12">
+                    <h2 class="font-cormorant text-5xl text-[#e09f3e] mb-6 tracking-wider uppercase font-bold">PROGRAM</h2>
                     <p class="font-marcellus text-xl leading-relaxed text-white">
-                        Yenice Vadi'nin harika doğasında dağların eteklerinde, ormanın yanı başında üç gün üç gece boyunca müzik, şifa ve kabile zamanı yaşayın. Harika müzisyenler, sanatçılar ve yol gösterici rehberler eşliğinde kendinizi dikkatlice düzenlenmiş bu yolculuğa bırakın:
+                        Yenice Vadi'nin harika doğasında dağların eteklerinde, ormanın yanı başında<br>
+                        Harika müzisyenler ve rehberler eşliğinde kendinizi bu yolculuğa bırakın:
                     </p>
                 </div>
 
-                <!-- Festival Features List -->
-                <div class="max-w-lg mx-auto">
-                    <ul class="grid grid-cols-1 gap-4 text-white text-center">
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">HER GÜN SABAH YOGASI</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">HEP BİRLİKTE OM BANYOSU</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">NEFES SEANSLARI</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">SES BANYOSU VE YOLCULUĞU</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">SEMA ATÖLYESİ</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">DADİRRİ DERİN DİNLEYİŞ MEDİTASYONU</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">İLKEL SESLER VE VOKAL AKTİVASYON ATÖLYESİ</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">HEP BİRLİKTE AKUSTİK KOLEKTİF MÜZİK-MEŞK</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">AKŞAM KONSERLERİ VE EKSTATİK DANS…</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">ÖZENLE HAZIRLANMIŞ SAĞLIKLI YEMEKLER, İÇECEKLER…</h3>
-                        </li>
-                        <li>
-                            <h3 class="font-westiva text-white text-xl font-normal uppercase">VE DAHA FAZLA DÖNÜŞTÜCÜ ATÖLYE VE ŞİFA SEANSLARI…</h3>
-                        </li>
-                    </ul>
-                    
-                    <div class="text-center mt-8">
-                        <p class="font-westiva text-white text-xl text-center mb-8">
-                            11-14 Temmuz'da Güney Ege'nin en güzel buluşma yerlerinden Yenice Vadi'de.
-                        </p>
+                <!-- Program Content -->
+                <div class="space-y-8 text-white">
+                    <!-- 11 Temmuz -->
+                    <div class="text-center">
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: rgb(61,58,87);">11 Temmuz | PERŞEMBE</h3>
+                        
+                        <div class="space-y-3 mb-6">
+                            <p class="font-marcellus text-lg"><strong>17:00 – Açılış Seremonisi</strong></p>
+                            <p class="font-marcellus text-base">Ocak Uyandırma & Dilek Tohumu</p>
+                            <p class="font-marcellus text-lg"><strong>18:30 – 19:30 – Akşam Yemeği</strong></p>
+                            <p class="font-marcellus text-lg"><strong>20:00 – 00:00 – Sema Gecesi</strong></p>
+                        </div>
+                        
+                        <div class="space-y-2 text-base">
+                            <p class="font-marcellus">• Türk Tasavvuf Müziği eşliğinde Sema buluşması</p>
+                            <p class="font-marcellus">• Farklı sanatçılarla canlı performans & Sema</p>
+                            <p class="font-marcellus">• YawaTurco canlı performans</p>
+                        </div>
+                    </div>
+
+                    <!-- 12 Temmuz -->
+                    <div class="text-center">
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: rgb(61,58,87);">12 Temmuz | CUMA</h3>
+                        
+                        <div class="space-y-3">
+                            <p class="font-marcellus text-lg"><strong>08:00 – 09:30 – Sabah Yogası</strong></p>
+                            <p class="font-marcellus text-lg"><strong>09:00 – 11:00 – Kahvaltı</strong></p>
+                            <p class="font-marcellus text-lg"><strong>12:00 – 13:30 – TÜMATA ile Ses Terapisi</strong></p>
+                            <p class="font-marcellus text-base">Geleneksel Türk Müziği eşliğinde</p>
+                            <p class="font-marcellus text-lg"><strong>13:30 – 16:30 – Serbest Zaman</strong></p>
+                            <p class="font-marcellus text-lg"><strong>16:30 – 18:00 – Baksı Dansı</strong></p>
+                            <p class="font-marcellus text-base italic">"Kadim şamanik köklerden gelen müzikli şifa dansı."</p>
+                            <p class="font-marcellus text-lg"><strong>19:30 – 20:30 – TÜMATA Konseri</strong></p>
+                            <p class="font-marcellus text-base">Türk Musikisini Araştırma ve Tanıtma Grubu</p>
+                            <p class="font-marcellus text-lg"><strong>21:00 – 22:30 – Nawashahu & Ykashahu Yawanawa Konseri</strong></p>
+                            <p class="font-marcellus text-base">Amazon Ormanlarından Şifalı Müzikler</p>
+                            <p class="font-marcellus text-lg"><strong>22:00 – 00:00 – Ekstatik Dans (Live DJ Set)</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- 13 Temmuz -->
+                    <div class="text-center">
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: rgb(61,58,87);">13 Temmuz | CUMARTESİ</h3>
+                        
+                        <div class="space-y-3">
+                            <p class="font-marcellus text-lg"><strong>09:00 – 10:30 – Arketipsel Hareketler</strong></p>
+                            <p class="font-marcellus text-base">Otantik Türk ezgileriyle bedenin arketipsel dansı</p>
+                            <p class="font-marcellus text-lg"><strong>10:30 – 11:00 – Kapanış Seremonisi</strong></p>
+                            <p class="font-marcellus text-base">Son nefes, yeni niyet...</p>
+                            <p class="font-marcellus text-lg"><strong>11:00 – 11:30 – Kahvaltı</strong></p>
+                            <p class="font-marcellus text-lg"><strong>12:00 – Çıkış</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -431,7 +463,7 @@
                     
                     <!-- Simplified Volunteer Application Form -->
                     <div class="bg-[#1a2e33]/40 rounded-lg p-8 backdrop-blur-sm">
-                        <form class="space-y-6">
+                        <form action="https://formspree.io/f/YOUR_VOLUNTEER_FORM_ID" method="POST" class="space-y-6">
                             <!-- Name Field -->
                             <div>
                                 <label for="name" class="block font-marcellus text-[#fff3b0] mb-2">Ad Soyad</label>
@@ -463,13 +495,16 @@
                                 <label for="about" class="block font-marcellus text-[#fff3b0] mb-2">Kendinizden Bahsedin</label>
                                 <textarea 
                                     id="about" 
-                                    name="about" 
+                                    name="message" 
                                     rows="5" 
                                     class="w-full px-4 py-3 bg-transparent border-2 border-[#fff3b0]/30 rounded-lg text-[#fff3b0] placeholder-[#fff3b0]/50 focus:outline-none focus:border-[#e09f3e] transition-colors duration-300 font-marcellus resize-none"
                                     placeholder="Biraz kendinizden bahsedin, deneyimleriniz, ilgi alanlarınız..."
                                     required
                                 ></textarea>
                             </div>
+                            
+                            <!-- Hidden field to identify form type -->
+                            <input type="hidden" name="_subject" value="Soul Seed Festival - Volunteer Application">
                             
                             <!-- Submit Button -->
                             <div class="pt-4">
@@ -561,6 +596,111 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4" onclick="closeModal()">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()" style="background-color: rgb(61,58,87);">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-6 border-b border-[#e09f3e]/30">
+                <h2 id="modal-title" class="font-cormorant text-3xl text-[#e09f3e] tracking-[0.15em] uppercase font-bold"></h2>
+                <button onclick="closeModal()" class="text-[#e09f3e] hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-6">
+                <div id="modal-content" class="font-marcellus text-white text-lg leading-relaxed"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal JavaScript -->
+    <script>
+        const modalData = {
+            'tumata-modal': {
+                title: 'TÜMATA "ATALARIN SESİ" KONSERİ',
+                content: `
+                    <p class="mb-4">Orta Asya & Türk kültüründe binlerce enstrüman ve bu enstrümanları üreten kültürün duygu ve düşüncelerini aktaran sayısız küyler, şarkılar ve danslar bulunmaktadır.</p>
+                    <p>TÜMATA Ataların Sesi Konseri'nde Orta Asya'dan Anadolu'ya uzanan geniş yelpazede örnekler sunularak, kadim musikimizin şifalı tınıları, otantik Türk enstrümanları ile dinleyicilerle buluşacak, katılımcılar bu ezgiler aracılığıyla sadece bir müziğe değil, binlerce yıllık bir kültürün özüne tanıklık edecektir.</p>
+                `
+            },
+            'therapy-modal': {
+                title: 'TÜRK MÜZİK TERAPİ GELENEĞİ SEANSI',
+                content: `
+                    <p class="mb-4">TÜMATA Grubu, Orta Asya ve Anadolu'nun binlerce yıllık müzikle tedavi geleneğini günümüze taşıyarak, makam ve hareket terapisi seansları düzenlemektedir. Farabi, İbn-i Sina gibi bilginlerin eserlerinde de yer alan bu gelenekte, makamlar duygular, organlar ve doğa elementleriyle ilişkilendirilir.</p>
+                    <p>TÜMATA'nın reseptif müzik terapi seanslarında, katılımcılar yere uzanarak seçilen makamı otantik enstrümanlarla canlı ve doğaçlama olarak dinler. Bu uygulama stresin azalmasına, zihinsel dinginliğe ve bedensel dengeye katkı sağlar. Her seans, zamana ve ihtiyaca özel olarak tasarlanır ve tekrarı olmayan özgün bir şifa alanı sunar.</p>
+                `
+            },
+            'baksi-modal': {
+                title: 'BAKSI DANSI (TÜRKLERİN EN ESKİ ŞİFA DANSI)',
+                content: `
+                    <p class="mb-4">Baksı Dansı, Orta Asya'nın şamanik geleneğinden gelen, müzik ve hareketle uygulanan kadim bir şifa ritüelidir. Kam ve Baksı'ların tedavi yöntemlerini günümüze taşıyan bu dans, dombra, gubuz, su sesi ve kam davulu gibi otantik çalgılar eşliğinde özel ritimlerle icra edilir.</p>
+                    <p class="mb-4">Katılımcılar hem ritüel hakkında bilgi edinir hem de uygulamalı olarak deneyimleme fırsatı bulur. Fiziksel ve ruhsal dengeyi destekleyen bu dans, günümüzde Sağlık Bakanlığı'nın Geleneksel ve Tamamlayıcı Tıp Programı içinde yer almakta ve Kazak, Kırgız, Altay halkları arasında "Karacorga" olarak da bilinmektedir.</p>
+                `
+            },
+            'archetypal-modal': {
+                title: 'ARŞETİPİKAL HAREKETLER',
+                content: `
+                    <p class="mb-4">Arşetipikal Hareketler, farklı kültürlerdeki ortak şifalı hareketlerden oluşan, müzik ve beden odaklı bir terapi yaklaşımıdır. Dr. Rahmi Oruç Güvenç ve Dr. Gerhard Kadir Tuçek tarafından geliştirilen bu yöntem, Avrupa'da hastanelerde uygulanan bir terapi seansıdır.</p>
+                    <p>Anadolu'daki Baksı Dansı, semahlar ve çeşitli halk danslarından ilham alan bu çalışma; Türk musikisi repertuarı ve otantik enstrümanlar eşliğinde gerçekleştirilir. Hareketler, elde başlayarak tüm bedene yayılır; amaç, blokajları açmak, duygusal dönüşüm yaratmak ve kişiyi sağlıklı yaşama yeniden uyumlandırmaktır.</p>
+                `
+            },
+            'sema-modal': {
+                title: 'TASAVVUF MUSİKİSİ VE SEMA',
+                content: `
+                    <p class="mb-4">Tasavvuf müziği, Allah'a duyulan sevgi, özlem ve teslimiyetin bir yansımasıdır; O'nun yüceliğini anmak, rahmetini hissetmek ve ilahi aşkla O'na yönelmektir.</p>
+                    <p class="mb-4">"Sema, dönüş hareketiyle gerçekleştirilen bir dua biçimidir. Çeşitli halk gruplarında, yüzyıllardan beri, çeşitli biçimlerde uygulanmakta olduğu görülmektedir. Bu ritmik dönme hareketi kişinin başka farklı şuur düzeylerine ulaşarak kendi içindeki manevi kaynağa bir giriş imkânı bulmasına yarar." <em>Dr. Rahmi Oruç Güvenç</em></p>
+                    <p>Dinletimizde, Türk Tasavvuf Musikisi repertuvarından seçilen eserler sema eşliğinde icra edilecektir.</p>
+                `
+            },
+            'yawanawa-modal': {
+                title: 'YAWANAWA KONSERİ',
+                content: `
+                    <p class="mb-4">Amazon'un kalbinden doğan şifalı müzikler, Yawanawa kardeşlerin sesiyle Anadolu'ya akıyor.</p>
+                    <p><em>Daha detaylı bilgi yakında eklenecektir...</em></p>
+                `
+            },
+            'yoga-modal': {
+                title: 'GÜNE BAŞLANGIÇ SABAH YOGASI',
+                content: `
+                    <p class="mb-4">Sinem Mengi ile sabah yogası. Esneме, denge, gevşeme...</p>
+                    <p><em>Daha detaylı bilgi yakında eklenecektir...</em></p>
+                `
+            },
+            'dance-modal': {
+                title: 'SERBEST AKIŞ EKSTATİK DANS',
+                content: `
+                    <p class="mb-4">Canlı DJ set ile dijital sesler eşliğinde serbest dans seansı.</p>
+                    <p><em>Daha detaylı bilgi yakında eklenecektir...</em></p>
+                `
+            }
+        };
+
+        function openModal(modalId) {
+            const modal = modalData[modalId];
+            if (modal) {
+                document.getElementById('modal-title').innerHTML = modal.title;
+                document.getElementById('modal-content').innerHTML = modal.content;
+                document.getElementById('modal-overlay').classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
