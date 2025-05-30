@@ -1,7 +1,7 @@
 /* Font declarations */
 @font-face {
     font-family: 'Recoleta';
-    src: url('/soulseed/fonts/recoleta.otf') format('opentype');
+    src: url('fonts/recoleta.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Recoleta-Bold';
-    src: url('/soulseed/fonts/recoleta-bold.otf') format('opentype');
+    src: url('fonts/recoleta-bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
