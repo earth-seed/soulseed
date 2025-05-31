@@ -641,7 +641,7 @@ section::before {
 }
 
 .hero-section {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     overflow: hidden;
     background-color: #335c67;
@@ -968,42 +968,43 @@ h1, h2, h3,
 /* --- Logo image sizing for hero section --- */
 .logo-image {
     display: block;
-    margin: 0 auto 2.5rem auto !important;
+    margin: 0 auto !important;
     align-self: center !important;
-    width: min(52vw, 520px) !important;
+    width: min(62.9vw, 629px) !important; /* Increased by 10% from 57.2vw */
     height: auto !important;
     object-fit: contain !important;
-    max-width: 520px !important;
-    max-height: 400px !important;
+    max-width: 629px !important; /* Increased by 10% from 572px */
+    max-height: 484px !important; /* Increased by 10% from 440px */
+    background: transparent !important;
 }
 
 /* Responsive logo sizing for different screen sizes */
 @media (min-width: 1200px) {
     .logo-image {
-        width: min(46vw, 575px) !important;
-        max-width: 575px !important;
+        width: min(55.7vw, 695.8px) !important; /* Increased by 10% */
+        max-width: 695.8px !important; /* Increased by 10% */
     }
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
     .logo-image {
-        width: min(58vw, 520px) !important;
-        max-width: 520px !important;
+        width: min(70.2vw, 629px) !important; /* Increased by 10% */
+        max-width: 629px !important; /* Increased by 10% */
     }
 }
 
 @media (max-width: 767px) {
     .logo-image {
-        width: min(81vw, 460px) !important;
-        max-width: 460px !important;
+        width: min(98vw, 556.6px) !important; /* Increased by 10% */
+        max-width: 556.6px !important; /* Increased by 10% */
         margin-bottom: 1.5rem !important;
     }
 }
 
 @media (max-width: 480px) {
     .logo-image {
-        width: min(92vw, 400px) !important;
-        max-width: 400px !important;
+        width: min(111.3vw, 484px) !important; /* Increased by 10% */
+        max-width: 484px !important; /* Increased by 10% */
         margin-bottom: 1rem !important;
     }
 }
@@ -1019,9 +1020,9 @@ h1, h2, h3,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 120px; /* Space below header */
+    padding-top: 120px;
     text-align: center;
-    min-height: calc(100vh - 120px);
+    min-height: calc(120vh - 120px);
 }
 
 @media (max-width: 768px) {
@@ -1053,11 +1054,12 @@ h1, h2, h3,
 
 .hero-text-below {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 3rem; /* Increased from 1.5rem to create more space */
     width: 100%;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 .subtitle-text {
@@ -1134,4 +1136,100 @@ h1, h2, h3,
 /* Font utility classes */
 .font-recoleta {
     font-family: 'Recoleta', sans-serif !important;
+}
+
+/* Logo Slider Styles */
+.logo-swiper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 60px !important; /* Further reduced padding */
+    min-height: 400px !important; /* Added minimum height */
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px !important; /* Further reduced margin */
+    height: 100% !important; /* Ensure full height */
+}
+
+.swiper-slide {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Update logo image styles */
+.logo-image {
+    display: block;
+    margin: 0 auto !important;
+    align-self: center !important;
+    width: min(55vw, 550px) !important; /* Reduced from 62.9vw */
+    height: auto !important;
+    object-fit: contain !important;
+    max-width: 550px !important; /* Reduced from 629px */
+    max-height: 400px !important; /* Reduced from 484px */
+    background: transparent !important;
+}
+
+/* Responsive logo sizing for different screen sizes */
+@media (min-width: 1200px) {
+    .logo-image {
+        width: min(50vw, 600px) !important; /* Reduced from 55.7vw */
+        max-width: 600px !important; /* Reduced from 695.8px */
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .logo-image {
+        width: min(65vw, 550px) !important; /* Reduced from 70.2vw */
+        max-width: 550px !important; /* Reduced from 629px */
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-image {
+        width: min(90vw, 500px) !important; /* Reduced from 98vw */
+        max-width: 500px !important; /* Reduced from 556.6px */
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        width: min(100vw, 450px) !important; /* Reduced from 111.3vw */
+        max-width: 450px !important; /* Reduced from 484px */
+        margin-bottom: 1rem !important;
+    }
+}
+
+.swiper-pagination {
+    position: absolute !important;
+    bottom: 20px !important; /* Further reduced from 30px */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 20 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 8px; /* Further reduced from 10px */
+    height: 8px; /* Further reduced from 10px */
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e09f3e;
+    opacity: 1;
+    transform: scale(1.1);
 }

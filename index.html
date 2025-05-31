@@ -16,6 +16,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Initialize Swiper for logo slider
+        const logoSwiper = new Swiper('.logo-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1000,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                }
+            },
+            on: {
+                init: function () {
+                    // Force pagination position update after initialization
+                    setTimeout(() => {
+                        const pagination = this.pagination.el;
+                        if (pagination) {
+                            pagination.style.bottom = '60px';
+                        }
+                    }, 100);
+                }
+            }
+        });
+    </script>
 </head>
 <body class="bg-[#335c67]">
     <div id="blur-overlay"></div>
@@ -81,11 +115,34 @@
                 <h1 style="color: #000054;">11-13 Temmuz - Muğla, Yenice Vadisi, Türkiye</h1>
             </div>
             
-            <img 
-                src="assets/SS_Logo.png" 
-                alt="Soul Seed Festival Anatolia" 
-                class="logo-image transform transition-all duration-300 hover:scale-105"
-            >
+            <!-- Logo Slider -->
+            <div class="swiper logo-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img 
+                            src="assets/SS_Logo.png" 
+                            alt="Soul Seed" 
+                            class="logo-image"
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <img 
+                            src="assets/Yawanawa_Slider.png" 
+                            alt="Yawanawa" 
+                            class="logo-image"
+                        >
+                    </div>
+                    <div class="swiper-slide">
+                        <img 
+                            src="assets/Tumata_Slider.png" 
+                            alt="Tumata" 
+                            class="logo-image"
+                        >
+                    </div>
+                </div>
+                <!-- Add pagination back inside swiper -->
+                <div class="swiper-pagination"></div>
+            </div>
             
             <!-- Text below logo -->
             <div class="hero-text-below">
