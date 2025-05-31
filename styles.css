@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'Gatwick';
-    src: url('/soulseed/fonts/Gatwick-JumboSemibold.otf') format('opentype');
+    src: url('fonts/Gatwick-JumboSemibold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -240,10 +240,30 @@ section::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Reduced to only cover nav */
+    height: 100px;
     backdrop-filter: blur(5px);
     pointer-events: none;
     z-index: 15;
+}
+
+/* Hide blur overlay on mobile */
+@media (max-width: 768px) {
+    #blur-overlay {
+        display: none;
+    }
+    
+    /* Adjust hero section for mobile without blur */
+    .hero-section {
+        padding-top: 60px !important;
+    }
+    
+    .hero-logo-container {
+        padding-top: 40px;
+    }
+    
+    .hero-text-above {
+        margin-top: 0;
+    }
 }
 
 /* Add new styles for hero section */
@@ -603,14 +623,49 @@ section::before {
     }
 
     .hero-section {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        height: 100vh !important;
-        width: 100% !important;
-        overflow: hidden !important;
-        max-width: 100vw !important;
+        height: 140vh !important; /* Increased height */
+        padding-top: 60px !important;
+    }
+
+    .hero-logo-container {
+        padding-top: 80px; /* Increased top padding to move content down */
+        min-height: calc(140vh - 80px);
+        justify-content: flex-start;
+    }
+
+    .hero-text-above {
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        margin-top: 2rem; /* Added top margin to move text down */
+    }
+    
+    .hero-text-below {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-text-above h1 {
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+        line-height: 1.4;
+        padding: 0 0.5rem;
+    }
+
+    .subtitle-text {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        line-height: 1.4;
+        padding: 0 0.5rem;
+    }
+
+    .logo-image {
+        width: min(80vw, 400px) !important;
+        max-width: 400px !important;
+        margin: 1rem auto !important;
+    }
+
+    .logo-swiper {
+        min-height: 300px !important;
+        padding-bottom: 40px !important;
     }
 
     .content-container {
@@ -631,6 +686,47 @@ section::before {
         width: 100% !important;
         text-align: center !important;
         padding: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 150vh !important; /* Further increased height for smaller screens */
+    }
+
+    .hero-logo-container {
+        padding-top: 60px;
+        min-height: calc(150vh - 60px);
+    }
+
+    .hero-text-above {
+        margin-bottom: 0.75rem;
+        margin-top: 1.5rem; /* Adjusted top margin for smaller screens */
+    }
+    
+    .hero-text-below {
+        margin-top: 0.75rem;
+    }
+
+    .hero-text-above h1 {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        padding: 0 0.25rem;
+    }
+
+    .subtitle-text {
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+        padding: 0 0.25rem;
+    }
+
+    .logo-image {
+        width: min(85vw, 350px) !important;
+        max-width: 350px !important;
+        margin: 0.75rem auto !important;
+    }
+
+    .logo-swiper {
+        min-height: 250px !important;
+        padding-bottom: 30px !important;
     }
 }
 
@@ -1025,41 +1121,38 @@ h1, h2, h3,
     min-height: calc(120vh - 120px);
 }
 
-@media (max-width: 768px) {
-    .hero-logo-container {
-        padding-top: 100px;
-        max-width: 95vw;
-        min-height: calc(100vh - 100px);
-    }
-}
-
 /* --- Hero text styling to match reference image --- */
 .hero-text-above {
     text-align: center;
     margin-bottom: 3rem;
     width: 100%;
+    position: relative;
+    z-index: 20; /* Increased z-index to stay above blur */
 }
 
 .hero-text-above h1 {
     font-family: 'Recoleta-Bold', sans-serif;
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: normal;
-    color: #4a5568; /* Blue-gray color matching the reference */
+    color: #4a5568;
     letter-spacing: 0.1em;
     margin: 0;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Added text shadow for better visibility */
 }
 
 .hero-text-below {
     text-align: center;
-    margin-top: 3rem; /* Increased from 1.5rem to create more space */
+    margin-top: 3rem;
     width: 100%;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 20; /* Increased z-index to stay above blur */
 }
 
 .subtitle-text {
@@ -1073,6 +1166,7 @@ h1, h2, h3,
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem; /* Added padding to prevent text from touching edges */
 }
 
 /* Program section date titles styling */
@@ -1232,4 +1326,286 @@ h1, h2, h3,
     background: #e09f3e;
     opacity: 1;
     transform: scale(1.1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero-logo-container {
+        padding-top: 40px;
+        min-height: calc(100vh - 40px);
+        justify-content: flex-start;
+    }
+
+    .hero-text-above {
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-text-below {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-text-above h1 {
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+        line-height: 1.4;
+        padding: 0 0.5rem;
+    }
+
+    .subtitle-text {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        line-height: 1.4;
+        padding: 0 0.5rem;
+    }
+
+    .logo-image {
+        width: min(80vw, 400px) !important;
+        max-width: 400px !important;
+        margin: 1rem auto !important;
+    }
+
+    .logo-swiper {
+        min-height: 300px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo-container {
+        padding-top: 30px;
+    }
+
+    .hero-text-above {
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-text-below {
+        margin-top: 0.75rem;
+    }
+
+    .hero-text-above h1 {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        padding: 0 0.25rem;
+    }
+
+    .subtitle-text {
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+        padding: 0 0.25rem;
+    }
+
+    .logo-image {
+        width: min(85vw, 350px) !important;
+        max-width: 350px !important;
+        margin: 0.75rem auto !important;
+    }
+
+    .logo-swiper {
+        min-height: 250px !important;
+        padding-bottom: 30px !important;
+    }
+}
+
+/* Update blur overlay to not affect hero text */
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    z-index: 15;
+}
+
+/* Modal styles */
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 50;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+#modal-overlay.active {
+    display: flex;
+}
+
+#modal-overlay > div {
+    background-color: rgb(61, 58, 87);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 32rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    margin: auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}
+
+#modal-overlay > div > div:first-child {
+    position: sticky;
+    top: 0;
+    background-color: rgb(61, 58, 87);
+    z-index: 1;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(224, 159, 62, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal-overlay > div > div:last-child {
+    padding: 1rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    #modal-overlay {
+        padding: 0.5rem;
+    }
+
+    #modal-overlay > div {
+        max-width: 100%;
+        max-height: 95vh;
+        margin: 0.5rem;
+    }
+
+    #modal-overlay > div > div:first-child {
+        padding: 0.75rem;
+    }
+
+    #modal-overlay > div > div:last-child {
+        padding: 0.75rem;
+    }
+
+    #modal-title {
+        font-size: 1.5rem !important;
+        padding-right: 2rem;
+    }
+
+    /* Make close button more touch-friendly */
+    #modal-overlay button {
+        padding: 0.5rem;
+        margin: -0.5rem;
+    }
+
+    #modal-overlay button svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Concert Card Mobile Optimizations */
+@media (max-width: 768px) {
+    .group.rounded-2xl {
+        margin: 0 1rem;
+    }
+
+    .group.rounded-2xl > div:last-child {
+        padding: 1.5rem !important;
+        min-height: auto !important;
+    }
+
+    .group.rounded-2xl h3 {
+        font-size: 1.5rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+        padding: 0 0.5rem !important;
+    }
+
+    .group.rounded-2xl p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        padding: 0 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .group.rounded-2xl img {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .group.rounded-2xl h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .group.rounded-2xl p {
+        font-size: 0.85rem !important;
+    }
+
+    .group.rounded-2xl img {
+        height: 250px !important;
+    }
+}
+
+/* FAQ and Ekibe Katıl Section Font Styles */
+#soru-cevap h3,
+#soru-cevap p,
+#ekibe-katil p,
+#ekibe-katil label,
+#ekibe-katil input,
+#ekibe-katil textarea,
+#ekibe-katil button,
+#success-message p {
+    font-family: 'Recoleta', sans-serif !important;
+}
+
+#soru-cevap h3 {
+    font-weight: bold !important;
+}
+
+#ekibe-katil input::placeholder,
+#ekibe-katil textarea::placeholder {
+    font-family: 'Recoleta', sans-serif !important;
+    opacity: 0.7;
+}
+
+/* Mobile optimizations for FAQ and Ekibe Katıl text */
+@media (max-width: 768px) {
+    #soru-cevap h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    #soru-cevap p,
+    #ekibe-katil p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    #ekibe-katil input,
+    #ekibe-katil textarea {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #soru-cevap h3 {
+        font-size: 1rem !important;
+    }
+    
+    #soru-cevap p,
+    #ekibe-katil p {
+        font-size: 0.9rem !important;
+    }
+    
+    #ekibe-katil input,
+    #ekibe-katil textarea {
+        font-size: 0.85rem !important;
+    }
 }

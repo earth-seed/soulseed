@@ -9,6 +9,7 @@
     <link rel="preload" href="assets/16_9.png" as="image" media="(min-width: 768px)">
     <link rel="preload" href="assets/4_3.png" as="image" media="(max-width: 767px)">
     <meta charset="UTF-8">
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulSeed Festival</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -188,7 +189,7 @@
                         <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
                             <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 21:00</p>
                             <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">Nawashahu & Ykashahu Yawanawa</h3>
-                            <p class="font-marcellus text-white text-sm leading-relaxed break-words whitespace-nowrap">Amazon'un kalbinden doğan şifalı müzikler, Yawanawa kardeşlerin sesiyle Anadolu'ya akıyor.</p>
+                            <p class="font-marcellus text-white text-sm leading-relaxed break-words whitespace-normal">Amazon'un kalbinden doğan şifalı müzikler, Yawanawa kardeşlerin sesiyle Anadolu'ya akıyor.</p>
                         </div>
                     </div>
                     
@@ -200,7 +201,7 @@
                         <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
                             <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 19:30</p>
                             <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">TÜMATA "ATALARIN SESİ"</h3>
-                            <p class="font-marcellus text-white text-sm leading-relaxed break-words whitespace-nowrap">Türk Musikisini Araştırma ve Tanıtma Grubu ile geleneksel Türk müziğinin derinliklerine yolculuk.</p>
+                            <p class="font-marcellus text-white text-sm leading-relaxed break-words whitespace-normal">Türk Musikisini Araştırma ve Tanıtma Grubu ile geleneksel Türk müziğinin derinliklerine yolculuk.</p>
                         </div>
                     </div>
                     </div>
@@ -734,14 +735,22 @@
             if (modal) {
                 document.getElementById('modal-title').innerHTML = modal.title;
                 document.getElementById('modal-content').innerHTML = modal.content;
-                document.getElementById('modal-overlay').classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                const modalOverlay = document.getElementById('modal-overlay');
+                modalOverlay.classList.remove('hidden');
+                modalOverlay.classList.add('active');
+                
+                // Simply prevent scrolling without changing position
+                document.body.style.overflow = 'hidden';
             }
         }
 
         function closeModal() {
-            document.getElementById('modal-overlay').classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            const modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.classList.add('hidden');
+            modalOverlay.classList.remove('active');
+            
+            // Restore scrolling
+            document.body.style.overflow = '';
         }
 
         // Close modal with Escape key
@@ -749,6 +758,18 @@
             if (event.key === 'Escape') {
                 closeModal();
             }
+        });
+
+        // Close modal when clicking outside content
+        document.getElementById('modal-overlay').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        // Prevent modal content clicks from closing the modal
+        document.querySelector('#modal-overlay > div').addEventListener('click', function(event) {
+            event.stopPropagation();
         });
     </script>
 
