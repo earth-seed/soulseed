@@ -254,14 +254,15 @@ section::before {
     
     /* Adjust hero section for mobile without blur */
     .hero-section {
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
-        overflow: hidden !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
     }
     
     .hero-logo-container {
-        height: 100vh !important;
+        height: auto !important;
+        min-height: 0 !important;
         padding-top: 6rem;
         padding-bottom: 2rem;
         display: flex;
@@ -300,13 +301,14 @@ section::before {
 
 @media (max-width: 480px) {
     .hero-section {
-        height: 100vh !important;
-        min-height: 100vh !important;
-        max-height: 100vh !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
     }
     
     .hero-logo-container {
-        height: 100vh !important;
+        height: auto !important;
+        min-height: 0 !important;
         padding-top: 4rem;
     }
 }
@@ -668,8 +670,10 @@ section::before {
     }
 
     .hero-section {
-        height: 140vh !important; /* Increased height */
-        padding-top: 60px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
     }
 
     .hero-logo-container {
@@ -736,7 +740,9 @@ section::before {
 
 @media (max-width: 480px) {
     .hero-section {
-        height: 150vh !important; /* Further increased height for smaller screens */
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
     }
 
     .hero-logo-container {
