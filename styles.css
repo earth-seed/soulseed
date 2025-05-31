@@ -254,15 +254,60 @@ section::before {
     
     /* Adjust hero section for mobile without blur */
     .hero-section {
-        padding-top: 60px !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        overflow: hidden !important;
     }
     
     .hero-logo-container {
-        padding-top: 40px;
+        height: 100vh !important;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     
     .hero-text-above {
-        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-text-below {
+        margin-top: 1rem;
+    }
+    
+    .hero-text-above h1 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .subtitle-text {
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+    
+    .logo-image {
+        max-width: 80%;
+        height: auto;
+    }
+    
+    .logo-swiper {
+        height: auto;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+    }
+    
+    .hero-logo-container {
+        height: 100vh !important;
+        padding-top: 4rem;
     }
 }
 
