@@ -2,8 +2,8 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const sourceDir = path.join(__dirname, '../assets');
-const outputDir = path.join(__dirname, '../assets-compressed');
+const sourceDir = path.join(__dirname, '../assets-full');
+const outputDir = path.join(__dirname, '../assets');
 
 // Create output directory if it doesn't exist
 if (!fs.existsSync(outputDir)) {
@@ -14,6 +14,7 @@ async function compressImage(inputPath, outputPath) {
     try {
         const image = sharp(inputPath);
         const metadata = await image.metadata();
+        const isPNG = inputPath.toLowerCase().endsWith('.png');
         
         // Calculate new dimensions while maintaining aspect ratio
         // Max width of 1920px for hero images
@@ -26,16 +27,26 @@ async function compressImage(inputPath, outputPath) {
             newHeight = Math.round((metadata.height * maxWidth) / metadata.width);
         }
 
-        await image
-            .resize(newWidth, newHeight, {
-                fit: 'inside',
-                withoutEnlargement: true
-            })
-            .jpeg({
-                quality: 80, // Good balance between quality and size
-                progressive: true // Creates a progressive JPEG
-            })
-            .toFile(outputPath);
+        let pipeline = image.resize(newWidth, newHeight, {
+            fit: 'inside',
+            withoutEnlargement: true
+        });
+
+        // Preserve file format and handle transparency
+        if (isPNG) {
+            pipeline = pipeline.png({
+                quality: 80,
+                compressionLevel: 9,
+                palette: true
+            });
+        } else {
+            pipeline = pipeline.jpeg({
+                quality: 80,
+                progressive: true
+            });
+        }
+
+        await pipeline.toFile(outputPath);
 
         const originalSize = fs.statSync(inputPath).size;
         const compressedSize = fs.statSync(outputPath).size;
