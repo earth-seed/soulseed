@@ -9,7 +9,7 @@
     <link rel="preload" href="assets/16_9.jpg" as="image" media="(min-width: 768px)">
     <link rel="preload" href="assets/4_3.jpg" as="image" media="(max-width: 767px)">
     <meta charset="UTF-8">
-    <link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
+    <link rel="icon" type="image/jpeg" href="assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulSeed Festival</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -103,62 +103,68 @@
     </style>
 
     <!-- Hero Section -->
-    <section id="anasayfa" class="hero-section relative justify-center">
-        <div class="absolute inset-0 bg-cover bg-center z-0 hidden md:block" 
-             style="background-image: url('assets/16_9.jpg');"
-             loading="eager">
-        </div>
-        <div class="absolute inset-0 bg-cover bg-center z-0 block md:hidden" 
-             style="background-image: url('assets/4_3.jpg'); height: 100vh; top: 0; bottom: auto;"
-             loading="eager">
-        </div>
-        <div class="hero-logo-container">
-            <!-- Text above logo -->
-            <div class="hero-text-above">
-                <h1 style="color: #000054;">11-13 Temmuz - Muğla, Yenice Vadisi, Türkiye</h1>
-            </div>
-            
-            <!-- Logo Slider -->
-            <div class="swiper logo-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img 
-                            src="assets/SS_Logo.png" 
-                            alt="Soul Seed" 
-                            class="logo-image"
-                            width="300"
-                            height="100"
-                            loading="eager"
-                        >
-                    </div>
-                    <div class="swiper-slide">
-                        <img 
-                            src="assets/Yawanawa_Slider.png" 
-                            alt="Yawanawa" 
-                            class="logo-image"
-                            width="300"
-                            height="100"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="swiper-slide">
-                        <img 
-                            src="assets/Tumata_Slider.png" 
-                            alt="Tumata" 
-                            class="logo-image"
-                            width="300"
-                            height="100"
-                            loading="lazy"
-                        >
+    <section class="hero-section">
+        <div class="absolute inset-0 bg-cover bg-center z-0 hidden md:block" style="background-image: url('assets/16_9.jpg');"></div>
+        <div class="absolute inset-0 bg-cover bg-center z-0 block md:hidden" style="background-image: url('assets/4_3.jpg');"></div>
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <!-- Text above logo -->
+                <div class="hero-text-above">
+                    <h1 style="color: #000054;">11-13 Temmuz - Yenice Vadisi, Türkiye</h1>
+                </div>
+                
+                <!-- Logo Slider -->
+                <div class="swiper logo-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img 
+                                src="assets/SS_Logo.png" 
+                                alt="Soul Seed" 
+                                class="logo-image"
+                                width="300"
+                                height="100"
+                                loading="eager"
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <img 
+                                src="assets/Yawanawa_Slider.png" 
+                                alt="Yawanawa" 
+                                class="logo-image"
+                                width="300"
+                                height="100"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <img 
+                                src="assets/Tumata_Slider.png" 
+                                alt="Tumata" 
+                                class="logo-image"
+                                width="300"
+                                height="100"
+                                loading="lazy"
+                            >
+                        </div>
                     </div>
                 </div>
-                <!-- Add pagination back inside swiper -->
-                <div class="swiper-pagination"></div>
-            </div>
-            
-            <!-- Text below logo -->
-            <div class="hero-text-below">
-                <p class="subtitle-text" style="color: #fbd0a0;">AMAZON'DAN ANADOLU'YA KUTSAL SESLER YOLCULUĞU</p>
+                
+                <!-- Text below logo -->
+                <div class="hero-text-below">
+                    <p class="subtitle-text" style="color: #fbd0a0;">
+                        <span class="desktop-only">AMAZON'DAN ANADOLU'YA KUTSAL SESLER YOLCULUĞU</span>
+                        <span class="mobile-only">
+                            <span class="first-line">AMAZON'DAN ANADOLU'YA</span>
+                            <span class="second-line">KUTSAL SESLER YOLCULUĞU</span>
+                        </span>
+                    </p>
+                    <img 
+                        src="assets/YawaTurco_Logo.png" 
+                        alt="YawaTurco" 
+                        class="yawaturco-logo"
+                        loading="lazy"
+                    >
+                </div>
             </div>
         </div>
     </section>
@@ -269,7 +275,7 @@
                     <div style="background-color: #595b88;" class="rounded-lg p-8 text-center flex flex-col justify-center cursor-pointer h-full" onclick="openModal('yoga-modal')">
                         <h3 class="font-cormorant text-2xl text-[#e09f3e] mb-4 tracking-[0.15em] uppercase font-bold break-words hyphens-auto">GÜNE BAŞLANGIÇ<br>SABAH YOGASI</h3>
                         <p class="font-marcellus text-white text-base leading-relaxed break-words">
-                            Sinem Mengi ile sabah yogası.<br>Esneме, denge, gevşeme...
+                            Sinem Mengi ile sabah yogası.<br>Esnemе, denge, gevşeme...
                         </p>
                     </div>
                     
@@ -306,7 +312,7 @@
                 <div class="space-y-8 text-white">
                     <!-- 11 Temmuz -->
                     <div class="text-center">
-                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">11 Temmuz | PERŞEMBE</h3>
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">11 Temmuz | CUMA</h3>
                         
                         <div class="space-y-3 mb-6">
                             <p class="font-marcellus text-lg"><strong>17:00 – Açılış Seremonisi</strong></p>
@@ -322,7 +328,7 @@
 
                     <!-- 12 Temmuz -->
                     <div class="text-center">
-                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">12 Temmuz | CUMA</h3>
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">12 Temmuz | CUMARTESİ</h3>
                         
                         <div class="space-y-3">
                             <p class="font-marcellus text-lg"><strong>08:00 – 09:30 – Sabah Yogası</strong></p>
@@ -342,7 +348,7 @@
 
                     <!-- 13 Temmuz -->
                     <div class="text-center">
-                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">13 Temmuz | CUMARTESİ</h3>
+                        <h3 class="font-cormorant text-3xl mb-6 font-bold" style="color: #472b42;">13 Temmuz | PAZAR</h3>
                         
                         <div class="space-y-3">
                             <p class="font-marcellus text-lg"><strong>09:00 – 10:30 – Arketipsel Hareketler</strong></p>
