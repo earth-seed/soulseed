@@ -6,8 +6,8 @@
     <link rel="preload" href="/soulseed/fonts/recoleta-bold.otf" as="font" type="font/otf" crossorigin>
     <!-- Preload critical images -->
     <link rel="preload" href="assets/SS_Logo.png" as="image">
-    <link rel="preload" href="assets/16_9.png" as="image" media="(min-width: 768px)">
-    <link rel="preload" href="assets/4_3.png" as="image" media="(max-width: 767px)">
+    <link rel="preload" href="assets/16_9.jpg" as="image" media="(min-width: 768px)">
+    <link rel="preload" href="assets/4_3.jpg" as="image" media="(max-width: 767px)">
     <meta charset="UTF-8">
     <link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,10 +105,12 @@
     <!-- Hero Section -->
     <section id="anasayfa" class="hero-section relative justify-center">
         <div class="absolute inset-0 bg-cover bg-center z-0 hidden md:block" 
-             style="background-image: url('assets/16_9.png');">
+             style="background-image: url('assets/16_9.jpg');"
+             loading="eager">
         </div>
         <div class="absolute inset-0 bg-cover bg-center z-0 block md:hidden" 
-             style="background-image: url('assets/4_3.png'); height: 100vh; top: 0; bottom: auto;">
+             style="background-image: url('assets/4_3.jpg'); height: 100vh; top: 0; bottom: auto;"
+             loading="eager">
         </div>
         <div class="hero-logo-container">
             <!-- Text above logo -->
@@ -124,6 +126,9 @@
                             src="assets/SS_Logo.png" 
                             alt="Soul Seed" 
                             class="logo-image"
+                            width="300"
+                            height="100"
+                            loading="eager"
                         >
                     </div>
                     <div class="swiper-slide">
@@ -131,6 +136,9 @@
                             src="assets/Yawanawa_Slider.png" 
                             alt="Yawanawa" 
                             class="logo-image"
+                            width="300"
+                            height="100"
+                            loading="lazy"
                         >
                     </div>
                     <div class="swiper-slide">
@@ -138,6 +146,9 @@
                             src="assets/Tumata_Slider.png" 
                             alt="Tumata" 
                             class="logo-image"
+                            width="300"
+                            height="100"
+                            loading="lazy"
                         >
                     </div>
                 </div>
@@ -188,7 +199,7 @@
                         </div>
                         <div style="background-color: #1a3d3d;" class="p-8 text-center min-h-[200px] flex flex-col justify-center">
                             <p class="text-white text-sm mb-3 font-medium">12 Temmuz, 21:00</p>
-                            <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">Nawashahu & Ykashahu Yawanawa</h3>
+                            <h3 class="font-cormorant text-4xl text-[#e09f3e] mb-2 tracking-[0.15em] font-bold break-words hyphens-auto">NAWASHAHU & YKASHAHU YAWANAWA</h3>
                             <p class="font-marcellus text-white text-sm leading-relaxed break-words whitespace-normal">Amazon'un kalbinden doğan şifalı müzikler, Yawanawa kardeşlerin sesiyle Anadolu'ya akıyor.</p>
                         </div>
                     </div>
@@ -226,7 +237,7 @@
                     <div style="background-color: #472b42;" class="rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center cursor-pointer" onclick="openModal('baksi-modal')">
                         <h3 class="font-cormorant text-xl text-[#e09f3e] mb-6 tracking-[0.1em] uppercase font-bold leading-tight break-words hyphens-auto">BAKSI DANSI ATÖLYESİ</h3>
                         <p class="font-marcellus text-white text-sm leading-relaxed break-words">
-                            Orta Asya Kadim şamanlık köklerinden gelen müzikli şifa dansı.
+                            Türklerin en eski şifa dansı.
                         </p>
                     </div>
                     
@@ -242,7 +253,7 @@
                     <div style="background-color: #472b42;" class="rounded-lg p-8 text-center min-h-[280px] flex flex-col justify-center cursor-pointer" onclick="openModal('archetypal-modal')">
                         <h3 class="font-cormorant text-xl text-[#e09f3e] mb-6 tracking-[0.1em] uppercase font-bold leading-tight break-words hyphens-auto">ARŞETİPİKAL HAREKETLER</h3>
                         <p class="font-marcellus text-white text-sm leading-relaxed break-words">
-                            Otantik Türk ezgileriyle bedenin arketipsel dansı.
+                            Otantik Türk ezgileriyle bedenin arşetipikal dansı. 
                         </p>
                     </div>
                 </div>
@@ -305,8 +316,7 @@
                         </div>
                         
                         <div class="space-y-2 text-base">
-                            <p class="font-marcellus">Türk Tasavvuf Müziği eşliğinde Sema buluşması</p>
-                            <p class="font-marcellus">Farklı sanatçılarla canlı performans ve Sema</p>
+                            <p class="font-marcellus">Türk Tasavvuf Musikisi eşliğinde Sema buluşması.</p>
                         </div>
                     </div>
 
