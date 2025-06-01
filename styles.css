@@ -261,21 +261,20 @@ section::before {
     }
     
     .hero-logo-container {
-        padding-top: 100px;
+        padding-top: 30px !important;
         height: auto;
     }
     
     .hero-text-above {
-        margin-bottom: 1rem;
-    }
-    
-    .hero-text-below {
-        margin-top: 1rem;
+        margin-bottom: 1.2rem;
+        margin-top: 0 !important;
+        padding: 0 1rem;
     }
     
     .hero-text-above h1 {
-        font-size: 1rem;
-        line-height: 1.4;
+        font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+        padding: 0 0.5rem;
+        color: #000054;
     }
     
     .subtitle-text {
@@ -296,8 +295,33 @@ section::before {
     }
     
     .hero-logo-container {
-        padding-top: 70px;
+        padding-top: 10px !important;
         height: auto;
+    }
+
+    .hero-text-above {
+        margin-bottom: 0.8rem;
+        margin-top: 0 !important;
+    }
+    
+    .hero-text-below {
+        margin-top: 0.8rem;
+    }
+
+    .hero-text-above h1 {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        padding: 0 0.25rem;
+        color: #000054;
+    }
+
+    .subtitle-text {
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+        padding: 0 0.25rem;
+    }
+
+    .logo-swiper {
+        min-height: 250px !important;
+        padding-bottom: 30px !important;
     }
 }
 
@@ -665,20 +689,18 @@ section::before {
     }
 
     .hero-logo-container {
-        padding-top: 100px;
+        padding-top: 30px !important;
         height: auto;
     }
 
     .hero-text-above {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
+        margin-top: 0 !important;
         padding: 0 1rem;
-        margin-top: 2rem; /* Added top margin to move text down */
     }
     
     .hero-text-below {
-        margin-top: 2.5rem;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
+        margin-top: 1.2rem;
     }
 
     .hero-text-above h1 {
@@ -727,17 +749,17 @@ section::before {
     }
 
     .hero-logo-container {
-        padding-top: 70px;
+        padding-top: 10px !important;
         height: auto;
     }
 
     .hero-text-above {
-        margin-bottom: 0.75rem;
-        margin-top: 1.5rem; /* Adjusted top margin for smaller screens */
+        margin-bottom: 0.8rem;
+        margin-top: 0 !important;
     }
     
     .hero-text-below {
-        margin-top: 1.5rem;
+        margin-top: 0.8rem;
     }
 
     .hero-text-above h1 {
@@ -1309,25 +1331,29 @@ h1, h2, h3,
     max-width: 800px;
     text-shadow: none;
 }
+
+/* Consolidated mobile styles for hero-text-above */
 @media (max-width: 768px) {
     .hero-text-above {
-        margin-bottom: 0.75rem;
-        margin-top: 0;
+        margin-bottom: 1.2rem;
+        margin-top: 0 !important;
         padding: 0 1rem;
     }
     .hero-text-above h1 {
         font-size: clamp(1.2rem, 3.5vw, 1.4rem);
         padding: 0 0.5rem;
+        color: #000054;
     }
 }
 @media (max-width: 480px) {
     .hero-text-above {
-        margin-bottom: 0.5rem;
-        margin-top: 0;
+        margin-bottom: 0.8rem;
+        margin-top: 0 !important;
     }
     .hero-text-above h1 {
         font-size: clamp(1.1rem, 3vw, 1.3rem);
         padding: 0 0.25rem;
+        color: #000054;
     }
 }
 
@@ -1345,12 +1371,12 @@ h1, h2, h3,
 }
 @media (max-width: 768px) {
     .hero-text-below {
-        margin-top: 1.5rem;
+        margin-top: 1.2rem;
     }
 }
 @media (max-width: 480px) {
     .hero-text-below {
-        margin-top: 0.75rem;
+        margin-top: 0.8rem;
     }
 }
 
