@@ -682,9 +682,9 @@ section::before {
     }
 
     .hero-section {
-        min-height: 300px;
-        height: 80vh;
-        max-height: 600px;
+        min-height: 500px !important;
+        height: 90vh !important;
+        max-height: 700px !important;
         overflow: visible !important;
     }
 
@@ -716,8 +716,8 @@ section::before {
         padding: 0 0.5rem;
     }
     .logo-swiper {
-        min-height: 300px !important;
-        padding-bottom: 40px !important;
+        min-height: 400px !important;
+        padding-bottom: 60px !important;
     }
 
     .content-container {
@@ -739,13 +739,20 @@ section::before {
         text-align: center !important;
         padding: 0 !important;
     }
+
+    .logo-image {
+        width: min(100vw, 650px);
+        max-width: 650px;
+        max-height: 400px;
+        margin-bottom: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-section {
-        min-height: 300px;
-        height: 60vh;
-        max-height: 400px;
+        min-height: 450px !important;
+        height: 85vh !important;
+        max-height: 600px !important;
     }
 
     .hero-logo-container {
@@ -774,8 +781,15 @@ section::before {
     }
 
     .logo-swiper {
-        min-height: 250px !important;
-        padding-bottom: 30px !important;
+        min-height: 350px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .logo-image {
+        width: min(100vw, 350px);
+        max-width: 350px;
+        max-height: 200px;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -837,8 +851,9 @@ section::before {
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 300px;
-        max-height: 500px;
+        min-height: 500px !important;
+        height: 90vh !important;
+        max-height: 700px !important;
     }
     .hero-content {
         max-width: 99vw;
@@ -1242,13 +1257,13 @@ h1, h2, h3,
     .logo-image {
         width: min(100vw, 650px);
         max-width: 650px;
-        max-height: 300px;
-        margin-bottom: 1rem;
+        max-height: 400px;
+        margin-bottom: 1.5rem;
     }
     
     .logo-swiper {
-        min-height: 300px;
-        padding-bottom: 40px;
+        min-height: 400px !important;
+        padding-bottom: 60px !important;
     }
 }
 
@@ -1257,13 +1272,13 @@ h1, h2, h3,
     .logo-image {
         width: min(100vw, 350px);
         max-width: 350px;
-        max-height: 120px;
-        margin-bottom: 1rem;
+        max-height: 200px;
+        margin-bottom: 1.5rem;
     }
     
     .logo-swiper {
-        min-height: 250px;
-        padding-bottom: 30px;
+        min-height: 350px !important;
+        padding-bottom: 50px !important;
     }
 }
 
