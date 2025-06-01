@@ -261,7 +261,7 @@ section::before {
     }
     
     .hero-logo-container {
-        padding-top: 60px !important;
+        padding-top: 90px !important;
         width: 100% !important;
         max-width: 100% !important;
         position: relative !important;
@@ -309,14 +309,14 @@ section::before {
     }
     
     .subtitle-text {
-        font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+        font-size: clamp(1.1rem, 4vw, 1.4rem) !important;
         margin: 0.25rem 0 !important;
     }
 }
 
 @media (max-width: 480px) {
     .hero-logo-container {
-        padding-top: 40px !important;
+        padding-top: 65px !important;
         gap: 0.75rem !important;
     }
 
@@ -345,7 +345,7 @@ section::before {
     }
 
     .subtitle-text {
-        font-size: clamp(0.8rem, 2.5vw, 1rem) !important;
+        font-size: clamp(1rem, 4vw, 1.2rem) !important;
         margin: 0.25rem 0 !important;
     }
 }
@@ -714,7 +714,7 @@ section::before {
     }
 
     .hero-logo-container {
-        padding-top: 60px !important;
+        padding-top: 90px !important;
     }
 
     .hero-text-above {
@@ -735,7 +735,7 @@ section::before {
     }
 
     .subtitle-text {
-        font-size: clamp(0.8rem, 3vw, 1rem);
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
         line-height: 1.4;
         padding: 0 0.5rem;
     }
@@ -1322,17 +1322,15 @@ h1, h2, h3,
 
 @media (max-width: 768px) {
     .yawaturco-logo {
-        width: min(22vw, 80px);
-        max-width: 80px;
-        margin: 1.25rem auto 0 auto;
+        width: min(32vw, 100px);
+        max-width: 100px;
     }
 }
 
 @media (max-width: 480px) {
     .yawaturco-logo {
-        width: min(30vw, 60px);
-        max-width: 60px;
-        margin: 1rem auto 0 auto;
+        width: min(40vw, 80px);
+        max-width: 80px;
     }
 }
 
