@@ -261,67 +261,92 @@ section::before {
     }
     
     .hero-logo-container {
-        padding-top: 30px !important;
-        height: auto;
+        padding-top: 60px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative !important;
+        z-index: 10 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
     }
     
     .hero-text-above {
-        margin-bottom: 1.2rem;
+        margin-bottom: 0.5rem !important;
         margin-top: 0 !important;
-        padding: 0 1rem;
+        padding: 0 1rem !important;
+        order: 1 !important;
     }
     
     .hero-text-above h1 {
-        font-size: clamp(1.2rem, 3.5vw, 1.4rem);
-        padding: 0 0.5rem;
-        color: #000054;
+        font-size: clamp(1.1rem, 3.5vw, 1.3rem) !important;
+        margin-bottom: 0.5rem !important;
+        color: #000054 !important;
+        text-shadow: none !important;
+    }
+    
+    .logo-swiper {
+        min-height: 300px !important;
+        padding-bottom: 20px !important;
+        width: 100% !important;
+        position: relative !important;
+        order: 2 !important;
+        margin: 0.5rem 0 !important;
+    }
+    
+    .logo-image {
+        width: 85vw !important;
+        max-width: 500px !important;
+        max-height: 300px !important;
+        margin: 0 auto !important;
+        transform: none !important;
+    }
+    
+    .hero-text-below {
+        margin-top: 0.5rem !important;
+        order: 3 !important;
+        padding-bottom: 1.5rem !important;
     }
     
     .subtitle-text {
-        font-size: 0.875rem;
-        line-height: 1.4;
-    }
-    .logo-swiper {
-        height: auto;
-        margin: 1rem 0;
+        font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+        margin: 0.25rem 0 !important;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-section {
-        height: auto !important;
-        min-height: 0 !important;
-        max-height: none !important;
-    }
-    
     .hero-logo-container {
-        padding-top: 10px !important;
-        height: auto;
+        padding-top: 40px !important;
+        gap: 0.75rem !important;
     }
 
     .hero-text-above {
-        margin-bottom: 0.8rem;
-        margin-top: 0 !important;
-    }
-    
-    .hero-text-below {
-        margin-top: 0.8rem;
+        margin-bottom: 0.25rem !important;
     }
 
     .hero-text-above h1 {
-        font-size: clamp(1.1rem, 3vw, 1.3rem);
-        padding: 0 0.25rem;
-        color: #000054;
-    }
-
-    .subtitle-text {
-        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-        padding: 0 0.25rem;
+        font-size: clamp(1rem, 3vw, 1.2rem) !important;
     }
 
     .logo-swiper {
         min-height: 250px !important;
-        padding-bottom: 30px !important;
+        padding-bottom: 15px !important;
+        margin: 0.25rem 0 !important;
+    }
+
+    .logo-image {
+        width: 80vw !important;
+        max-width: 400px !important;
+        max-height: 250px !important;
+    }
+
+    .hero-text-below {
+        padding-bottom: 1rem !important;
+    }
+
+    .subtitle-text {
+        font-size: clamp(0.8rem, 2.5vw, 1rem) !important;
+        margin: 0.25rem 0 !important;
     }
 }
 
