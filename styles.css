@@ -280,24 +280,24 @@ section::before {
     
     .hero-text-above h1 {
         font-size: clamp(1.1rem, 3.5vw, 1.3rem) !important;
-        margin-bottom: 0.5rem !important;
+        margin-bottom: 0.25rem !important;
         color: #000054 !important;
         text-shadow: none !important;
     }
     
     .logo-swiper {
-        min-height: 300px !important;
-        padding-bottom: 20px !important;
+        min-height: 250px !important;
+        padding-bottom: 0 !important;
         width: 100% !important;
         position: relative !important;
         order: 2 !important;
-        margin: 0.5rem 0 !important;
+        margin: 0.25rem 0 !important;
     }
     
     .logo-image {
-        width: 85vw !important;
-        max-width: 500px !important;
-        max-height: 300px !important;
+        width: 80vw !important;
+        max-width: 400px !important;
+        max-height: 200px !important;
         margin: 0 auto !important;
         transform: none !important;
     }
@@ -305,11 +305,11 @@ section::before {
     .hero-text-below {
         margin-top: 0.5rem !important;
         order: 3 !important;
-        padding-bottom: 1.5rem !important;
+        padding-bottom: 0.5rem !important;
     }
     
     .subtitle-text {
-        font-size: clamp(1.1rem, 4vw, 1.4rem) !important;
+        font-size: clamp(1rem, 4vw, 1.2rem) !important;
         margin: 0.25rem 0 !important;
     }
 }
@@ -317,7 +317,7 @@ section::before {
 @media (max-width: 480px) {
     .hero-logo-container {
         padding-top: 65px !important;
-        gap: 0.75rem !important;
+        gap: 0.25rem !important;
     }
 
     .hero-text-above {
@@ -329,23 +329,24 @@ section::before {
     }
 
     .logo-swiper {
-        min-height: 250px !important;
-        padding-bottom: 15px !important;
+        min-height: 200px !important;
+        padding-bottom: 0 !important;
         margin: 0.25rem 0 !important;
     }
 
     .logo-image {
-        width: 80vw !important;
-        max-width: 400px !important;
-        max-height: 250px !important;
+        width: 75vw !important;
+        max-width: 350px !important;
+        max-height: 180px !important;
     }
 
     .hero-text-below {
-        padding-bottom: 1rem !important;
+        margin-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
     }
 
     .subtitle-text {
-        font-size: clamp(1rem, 4vw, 1.2rem) !important;
+        font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
         margin: 0.25rem 0 !important;
     }
 }
@@ -707,46 +708,52 @@ section::before {
     }
 
     .hero-section {
-        min-height: 600px !important;
-        height: 100vh !important;
-        max-height: 800px !important;
-        overflow: visible !important;
+        min-height: auto !important;
+        height: auto !important;
+        max-height: none !important;
+        padding-bottom: 2rem !important;
     }
 
     .hero-logo-container {
-        padding-top: 90px !important;
+        padding-top: 80px !important;
+        gap: 0.5rem !important;
     }
 
     .hero-text-above {
-        margin-bottom: 1.2rem;
-        margin-top: 0 !important;
-        padding: 0 1rem;
-    }
-    
-    .hero-text-below {
-        margin-top: 1.2rem;
+        margin-bottom: 0.5rem !important;
     }
 
     .hero-text-above h1 {
-        font-size: clamp(1.2rem, 3.5vw, 1.4rem);
-        line-height: 1.4;
-        padding: 0 0.5rem;
-        color: #000054;
+        font-size: clamp(1.1rem, 3.5vw, 1.3rem) !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .logo-swiper {
+        min-height: 250px !important;
+        padding-bottom: 0 !important;
+        margin: 0.25rem 0 !important;
+    }
+
+    .logo-image {
+        width: 80vw !important;
+        max-width: 400px !important;
+        max-height: 200px !important;
+    }
+
+    .hero-text-below {
+        margin-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
     }
 
     .subtitle-text {
-        font-size: clamp(1.1rem, 4vw, 1.4rem);
-        line-height: 1.4;
-        padding: 0 0.5rem;
+        font-size: clamp(1rem, 4vw, 1.2rem) !important;
+        margin: 0.25rem 0 !important;
     }
-    .logo-swiper {
-        min-height: 500px !important;
-        height: 90vh !important;
-        max-height: 700px !important;
-    }
-    .hero-content {
-        max-width: 99vw;
-        padding: 1rem 0.25rem;
+
+    .yawaturco-logo {
+        margin-top: 0.5rem !important;
+        width: min(40vw, 80px) !important;
+        max-width: 80px !important;
     }
 }
 
@@ -1506,9 +1513,7 @@ h1, h2, h3,
     #modal-overlay .p-6 {
         padding: 1rem;
     }
-}
-
-/* iOS-specific fixes */
+}/* iOS-specific fixes */
 @supports (-webkit-touch-callout: none) {
     #modal-overlay {
         height: -webkit-fill-available;
@@ -1518,3 +1523,4 @@ h1, h2, h3,
         max-height: 85vh;
     }
 }
+
