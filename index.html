@@ -65,6 +65,7 @@
                     <a href="#hakkinda" class="nav-link" style="font-size: 16px !important;">HAKKINDA</a>
                     <a href="#sanatcilar-rehberler" class="nav-link" style="font-size: 16px !important;">KONSERLER & PROGRAM</a>
                     <a href="#lokasyon-ulasim" class="nav-link" style="font-size: 16px !important;">LOKASYON & ULAŞIM</a>
+                    <a href="#bilet-rezervasyon" class="nav-link" style="font-size: 16px !important;">BİLET & REZERVASYON</a>
                     <a href="#soru-cevap" class="nav-link" style="font-size: 16px !important;">SORU&CEVAP</a>
                     <a href="#ekibe-katil" class="nav-link" style="font-size: 16px !important;">EKİBE KATIL</a>
                 </div>
@@ -85,6 +86,7 @@
                     <a href="#hakkinda" class="nav-link-mobile" style="font-size: 13px !important;">HAKKINDA</a>
                     <a href="#sanatcilar-rehberler" class="nav-link-mobile" style="font-size: 13px !important;">KONSERLER & PROGRAM</a>
                     <a href="#lokasyon-ulasim" class="nav-link-mobile" style="font-size: 13px !important;">LOKASYON & ULAŞIM</a>
+                    <a href="#bilet-rezervasyon" class="nav-link-mobile" style="font-size: 13px !important;">BİLET & REZERVASYON</a>
                     <a href="#soru-cevap" class="nav-link-mobile" style="font-size: 13px !important;">SORU&CEVAP</a>
                     <a href="#ekibe-katil" class="nav-link-mobile" style="font-size: 13px !important;">EKİBE KATIL</a>
                 </div>
@@ -414,17 +416,23 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="w-full h-80">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.8897371541584!2d28.299782!3d37.124334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bf7452d1b4c8b1%3A0x7c3c8c1c56a8c2a0!2sYenice%20Vadi!5e0!3m2!1sen!2sus!4v1709928367296!5m2!1sen!2sus"
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="eager" 
-            referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+    <!-- Ticket & Reservation Section -->
+    <section id="bilet-rezervasyon" style="background-color: #e09f3e; padding: 3rem 0;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-cormorant text-5xl text-white tracking-[0.2em] uppercase font-bold mb-6">BİLET & REZERVASYON</h2>
+                <style>
+                  @media (max-width: 600px) {
+                    #bilet-rezervasyon .ticket-nowrap {
+                      white-space: normal !important;
+                    }
+                  }
+                </style>
+                <p class="text-xl font-marcellus mb-2 ticket-nowrap" style="color: #3d3a57; white-space: nowrap; font-size: 1.1rem;">BİLET VE KONAKLAMA SEÇENEKLERİ İÇİN PDF DOSYASINDAN BİLGİLERE ERİŞEBİLİRSİN.</p>
+                <p class="text-base font-marcellus mb-4 ticket-nowrap" style="color: #3d3a57; white-space: nowrap; font-size: 1rem;">Festival bileti almak ve konaklama rezervasyonu için <span style="color: #fff; font-weight: bold;">soulseedanatolia@gmail.com</span> adresine eposta gönderebilirsin.</p>
+                <a href="https://drive.google.com/file/d/1Pg_xZY3IdnoH2VP-xWZc5sEiQ0EVKfRP/view" target="_blank" rel="noopener noreferrer" class="custom-ticket-btn" style="margin-top: 0.5rem;">BİLET & REZERVASYON PDF DOSYASI</a>
+            </div>
+        </div>
     </section>
 
     <!-- FAQ Section -->
@@ -754,8 +762,6 @@
                 const modalOverlay = document.getElementById('modal-overlay');
                 modalOverlay.classList.remove('hidden');
                 modalOverlay.classList.add('active');
-                
-                // Simply prevent scrolling without changing position
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -764,26 +770,21 @@
             const modalOverlay = document.getElementById('modal-overlay');
             modalOverlay.classList.add('hidden');
             modalOverlay.classList.remove('active');
-            
-            // Restore scrolling
             document.body.style.overflow = '';
         }
 
-        // Close modal with Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeModal();
             }
         });
 
-        // Close modal when clicking outside content
         document.getElementById('modal-overlay').addEventListener('click', function(event) {
             if (event.target === this) {
                 closeModal();
             }
         });
 
-        // Prevent modal content clicks from closing the modal
         document.querySelector('#modal-overlay > div').addEventListener('click', function(event) {
             event.stopPropagation();
         });
